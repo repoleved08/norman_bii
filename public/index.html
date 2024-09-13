@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="dist/output.css">
+  <link rel="stylesheet" href="/dist/output.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <style>
     .neon-glow {
@@ -16,6 +17,22 @@
         0 0 40px rgba(0, 255, 0, 0.2);
     }
 
+    .neon-gloww {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.8);
+    }
+
+    .neon-glow-green {
+      text-shadow: 0 0 8px rgba(57, 255, 20, 0.8), 0 0 16px rgba(57, 255, 20, 0.8);
+    }
+
+    .neon-glow-blue {
+      text-shadow: 0 0 8px rgba(31, 81, 255, 0.8), 0 0 16px rgba(31, 81, 255, 0.8);
+    }
+
+    .neon-glow-purple {
+      text-shadow: 0 0 8px rgba(213, 0, 249, 0.8), 0 0 16px rgba(213, 0, 249, 0.8);
+    }
+
     .text-neon-green {
       color: #39ff14;
     }
@@ -23,12 +40,95 @@
     .text-neon-pink {
       color: #ff007f;
     }
+    .neon-glow {
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 255, 255, 0.8);
+        }
+        .rotating-arrow {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            pointer-events: none;
+            border-top-color: transparent;
+            animation: rotate 3s linear infinite;
+        }
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        .card-content {
+            position: relative;
+            z-index: 10;
+        }
+         /* Custom styles for glowing effect */
+         .card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            position: relative;
+            background: #f9fafb;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card:hover .card-content {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card:before,
+        .card:after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(225deg, #89ff00, #010615, #00bcd4);
+            z-index: -1;
+            filter: blur(40px);
+            transition: background 0.5s ease;
+        }
+
+        .card:nth-child(2):before,
+        .card:nth-child(2):after {
+            background: linear-gradient(225deg, #ff005e, #010615, #fbff00);
+        }
+
+        .card:nth-child(3):before,
+        .card:nth-child(3):after {
+            background: linear-gradient(225deg, #dd6300, #010615, #2196f3);
+        }
+
+        .card:hover:before,
+        .card:hover:after {
+            background: linear-gradient(225deg, #00bcd4, #010615, #89ff00);
+        }
   </style>
 </head>
 
 <body class=" bg-white dark:bg-gray-800 ">
   <header class="flex justify-around">
-    <nav class="bg-white shadow-2xl sticky top-0 border-gray-200 px-4 rounded-full mt-3 max-w-screen-xl mx-2 lg:px-6 py-2.5 z-50 dark:bg-blue-950">
+    <nav
+      class="bg-white shadow-2xl sticky top-0 border-gray-200 px-4 rounded-full mt-3 max-w-screen-xl mx-2 lg:px-6 py-2.5 z-50 dark:bg-blue-950">
       <div class="flex flex-wrap justify-around items-center mx-auto max-w-screen-xl">
         <a href="/" class="flex items-center lg:mx-2">
           <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
@@ -77,127 +177,286 @@
       </div>
     </nav>
   </header>
-  
+
 
   <section
-  class="bg-white dark:bg-gray-900 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern.svg')] dark:bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')]">
-  <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative">
-    <a href="#"
-      class="inline-flex justify-between items-center py-1 px-1 pe-4 mb-7 text-sm text-blue-700 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800">
-      <span class="text-xs bg-blue-600 rounded-full text-white px-4 py-1.5 me-3">Repos</span> 
-      <span class="text-sm font-medium">Check my github repos</span>
-      <svg class="w-2.5 h-2.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-      </svg>
-    </a>
+    class="bg-white dark:bg-gray-900 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern.svg')] dark:bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')]">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative">
+      <a href="#"
+        class="inline-flex justify-between items-center py-1 px-1 pe-4 mb-7 text-sm text-blue-700 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800">
+        <span class="text-xs bg-blue-600 rounded-full text-white px-4 py-1.5 me-3">Repos</span>
+        <span class="text-sm font-medium">Check my github repos</span>
+        <svg class="w-2.5 h-2.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m1 9 4-4-4-4" />
+        </svg>
+      </a>
 
-    <!-- Minimal introduction -->
-    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-      Golang & Vue Developer
-    </h1>
-    <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200">
-      I create modern web applications using Golang for the backend and Vue for the frontend.
-    </p>
+      <!-- Minimal introduction -->
+      <h1
+        class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        Golang & Vue Developer
+      </h1>
+      <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200">
+        I create modern web applications using Golang for the backend and Vue for the frontend.
+      </p>
 
-    <!-- Profile image with glowing effect -->
-    <div class="relative mx-auto w-48 h-48">
-      <img src="./assets/norman.png" alt="Your Profile" class="w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-900">
-      <div class="absolute inset-0 rounded-full border-[8px] border-transparent border-t-blue-500 border-r-green-500 border-b-pink-500 border-l-yellow-500 animate-spin"></div>
+      <!-- Profile image with glowing effect -->
+      <div class="relative mx-auto w-48 h-48">
+        <img src="./assets/norman.png" alt="Your Profile"
+          class="w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-900">
+        <div
+          class="absolute inset-0 rounded-full border-[8px] border-transparent border-t-blue-500 border-r-green-500 border-b-pink-500 border-l-yellow-500 animate-spin">
+        </div>
+      </div>
+
+    </div>
+    <div
+      class="bg-gradient-to-b from-blue-50 to-transparent dark:from-blue-900 w-full h-full absolute top-0 left-0 z-0">
     </div>
 
+    <!--  Education background -->
+
+    <div class="flex items-center justify-center min-h-screen py-12 px-4">
+      <div class="max-w-4xl w-full">
+          <h1 class="text-4xl font-bold mb-8 text-center neon-glow-green">Education Timeline</h1>
+          <div class="relative border-l border-gray-300 dark:border-gray-700">
+              <div class="absolute w-3.5 h-3.5 bg-neon-blue rounded-full left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+
+              <div class="mb-8 ml-6">
+                  <div class="flex items-center mb-4">
+                      <div class="w-4 h-4 bg-neon-green rounded-full"></div>
+                      <div class="flex-grow ml-4 border-t border-gray-300 dark:border-gray-700"></div>
+                  </div>
+                  <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+                      <h2 class="text-2xl font-semibold text-neon-green neon-glow-green">BSc in Information Technology</h2>
+                      <p class="mt-2 text-gray-600 dark:text-gray-400">University of XYZ, 2018 - 2022</p>
+                      <p class="mt-2">Graduated with a degree in Information Technology. Focused on software development, database management, and networking.</p>
+                  </div>
+              </div>
+
+              <div class="mb-8 ml-6">
+                  <div class="flex items-center mb-4">
+                      <div class="w-4 h-4 bg-neon-blue rounded-full"></div>
+                      <div class="flex-grow ml-4 border-t border-gray-300 dark:border-gray-700"></div>
+                  </div>
+                  <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+                      <h2 class="text-2xl font-semibold text-neon-blue neon-glow-blue">Cybersecurity Course</h2>
+                      <p class="mt-2 text-gray-600 dark:text-gray-400">Certify Academy, 2023</p>
+                      <p class="mt-2">Completed a comprehensive course on cybersecurity, covering topics such as ethical hacking, network security, and incident response.</p>
+                  </div>
+              </div>
+
+              <div class="ml-6">
+                  <div class="flex items-center mb-4">
+                      <div class="w-4 h-4 bg-neon-purple rounded-full"></div>
+                      <div class="flex-grow ml-4 border-t border-gray-300 dark:border-gray-700"></div>
+                  </div>
+                  <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+                      <h2 class="text-2xl font-semibold text-neon-purple neon-glow-purple">Golang Course</h2>
+                      <p class="mt-2 text-gray-600 dark:text-gray-400">Code Mastery, 2024</p>
+                      <p class="mt-2">Completed an advanced course on Golang, learning about concurrency, web development, and best practices in the Go ecosystem.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
-  <div class="bg-gradient-to-b from-blue-50 to-transparent dark:from-blue-900 w-full h-full absolute top-0 left-0 z-0"></div>
-</section>
+
+    <!--  End education background -->
+  </section>
+
 
 
   <!-- Past tasks portfolio -->
-  <section class="bg-white dark:bg-gray-900 antialiased">
+  <section>
     <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
-      <div class="max-w-2xl mx-auto text-center">
-        <h2 class="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white">
-          Our work
-        </h2>
-        <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
-          Crafted with skill and care to help our clients grow their business!
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="space-y-4">
-          <span
-            class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-            Alphabet Inc.
-          </span>
-          <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
-            Official website
-          </h3>
-          <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-            Flowbite helps you connect with friends, family and communities of people who share your interests.
-          </p>
-          <a href="#" title=""
-            class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-            role="button">
-            View case study
-            <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-              fill="currentColor">
-              <path fill-rule="evenodd"
-                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                clip-rule="evenodd" />
-            </svg>
-          </a>
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white neon-glow">
+                Our Work
+            </h2>
+            <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                Crafted with skill and care to help our clients grow their business!
+            </p>
         </div>
 
-        <div class="space-y-4">
-          <span
-            class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-            Microsoft Corp.
-          </span>
-          <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
-            Management system
-          </h3>
-          <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-            Flowbite helps you connect with friends, family and communities of people who share your interests.
-          </p>
-          <a href="#" title=""
-            class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-            role="button">
-            View case study
-            <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-              fill="currentColor">
-              <path fill-rule="evenodd"
-                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                clip-rule="evenodd" />
-            </svg>
-          </a>
+        <div class="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="space-y-4 relative card">
+                <div class="rotating-arrow"></div>
+                <div class="card-content p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+                    <span class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                        Alphabet Inc.
+                    </span>
+                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white neon-glow">
+                        Official website
+                    </h3>
+                    <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
+                        Flowbite helps you connect with friends, family, and communities of people who share your interests.
+                    </p>
+                    <a href="#" title="" class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" role="button">
+                        View case study
+                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="space-y-4 relative card">
+                <div class="rotating-arrow"></div>
+                <div class="card-content p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+                    <span class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                        Microsoft Corp.
+                    </span>
+                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white neon-glow">
+                        Management system
+                    </h3>
+                    <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
+                        Flowbite helps you connect with friends, family, and communities of people who share your interests.
+                    </p>
+                    <a href="#" title="" class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" role="button">
+                        View case study
+                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="space-y-4 relative card">
+                <div class="rotating-arrow"></div>
+                <div class="card-content p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+                    <span class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                        Adobe Inc.
+                    </span>
+                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white neon-glow">
+                        Logo design
+                    </h3>
+                    <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
+                        Flowbite helps you connect with friends, family, and communities of people who share your interests.
+                    </p>
+                    <a href="#" title="" class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" role="button">
+                        View case study
+                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <!--  End of past tasks portfolio -->
+
+  <section>
+    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white neon-glow">
+                Our Work
+            </h2>
+            <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+                Crafted with skill and care to help our clients grow their business!
+            </p>
         </div>
 
-        <div class="space-y-4">
-          <span
-            class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-            Adobe Inc.
-          </span>
-          <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
-            Logo design
-          </h3>
-          <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-            Flowbite helps you connect with friends, family and communities of people who share your interests.
-          </p>
-          <a href="#" title=""
-            class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-            role="button">
-            View case study
-            <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-              fill="currentColor">
-              <path fill-rule="evenodd"
-                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                clip-rule="evenodd" />
-            </svg>
-          </a>
+        <div class="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="space-y-4 relative card">
+                <div class="card-content p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+                    <span class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                        Alphabet Inc.
+                    </span>
+                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white neon-glow">
+                        Official website
+                    </h3>
+                    <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
+                        Flowbite helps you connect with friends, family, and communities of people who share your interests.
+                    </p>
+                    <a href="#" title="" class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" role="button">
+                        View case study
+                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="space-y-4 relative card">
+                <div class="card-content p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+                    <span class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                        Microsoft Corp.
+                    </span>
+                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white neon-glow">
+                        Management system
+                    </h3>
+                    <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
+                        Flowbite helps you connect with friends, family, and communities of people who share your interests.
+                    </p>
+                    <a href="#" title="" class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" role="button">
+                        View case study
+                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="space-y-4 relative card">
+                <div class="card-content p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+                    <span class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                        Adobe Inc.
+                    </span>
+                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white neon-glow">
+                        Logo design
+                    </h3>
+                    <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
+                        Flowbite helps you connect with friends, family, and communities of people who share your interests.
+                    </p>
+                    <a href="#" title="" class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" role="button">
+                        View case study
+                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
+</section>
+
+
+  <!--  Contact form -->
+  <section class="bg-white dark:bg-gray-900">
+    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
+      <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical issue?
+        Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
+      <form action="#" class="space-y-8">
+        <div>
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+          <input type="email" id="email"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+            placeholder="name@flowbite.com" required>
+        </div>
+        <div>
+          <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+          <input type="text" id="subject"
+            class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+            placeholder="Let us know how we can help you" required>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your
+            message</label>
+          <textarea id="message" rows="6"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+            placeholder="Leave a comment..."></textarea>
+        </div>
+        <button type="submit"
+          class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send
+          message</button>
+      </form>
     </div>
   </section>
-  <!--  End of past tasks portfolio -->
+  <!--  End of contact form -->
 
   <!-- Footer start -->
   <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
@@ -233,7 +492,7 @@
 
   <!-- Footer End -->
   <script src="./index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
 </body>
 
 </html>

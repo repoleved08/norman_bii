@@ -4,7 +4,7 @@
   "description": "portfolio",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./public/output.css"
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css"
   },
   "author": "",
   "license": "ISC",

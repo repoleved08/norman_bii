@@ -4,12 +4,15 @@
   "description": "portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "start": "http-server ./dist" 
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "tailwindcss": "^3.4.11"
+    "tailwindcss": "^3.4.11",
+    "postcss": "^8.4.21",
+    "autoprefixer": "^10.4.14"
   },
   "dependencies": {
     "flowbite": "^2.5.1"

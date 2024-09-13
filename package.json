@@ -4,7 +4,7 @@
   "description": "portfolio",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "build": "tailwindcss -i ./src/input.css -o ./public/output.css --minify",
     "start": "http-server ./dist" 
   },
   "author": "",

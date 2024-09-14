@@ -148,22 +148,22 @@
 
 <body class=" bg-white dark:bg-gray-800 ">
   <header class="flex justify-around">
-    <nav
+    <nav id="main-navbar"
       class="bg-white shadow-2xl sticky top-0 border-gray-200 px-4 rounded-full mt-3 max-w-screen-xl mx-2 lg:px-6 py-2.5 z-50 dark:bg-blue-950">
       <div class="flex flex-wrap justify-around items-center mx-auto max-w-screen-xl">
         <a href="/" class="flex items-center lg:mx-2">
           <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-            <span class="text-neon-green neon-glow">&lt;</span>
+            <span class="text-neon-green neon-gloww">&lt;</span>
             norman_bii
-            <span class="text-neon-pink neon-glow">/&gt;</span>
+            <span class="text-neon-pink neon-gloww">/&gt;</span>
           </span>
         </a>
         <div class="flex items-center lg:order-2">
-          <a href="#"
-            class="text-white lg:mx-3 bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-500 dark:hover:bg-blue-600 focus:outline-none dark:focus:ring-blue-800 neon-glow hover:scale-105 transition-transform duration-300">
+          <a href="./assets/NormanCv.pdf"
+            class="text-white mx-2 lg:mx-3 bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-500 dark:hover:bg-blue-600 focus:outline-none dark:focus:ring-blue-800 neon-glow hover:scale-105 transition-transform duration-300">
             Resume
           </a>
-
+  
           <button data-collapse-toggle="mobile-menu-2" type="button"
             class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="mobile-menu-2" aria-expanded="false">
@@ -176,8 +176,7 @@
             <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clip-rule="evenodd">
-              </path>
+                clip-rule="evenodd"></path>
             </svg>
           </button>
         </div>
@@ -189,7 +188,7 @@
                 aria-current="page">Home</a>
             </li>
             <li>
-              <a href="#"
+              <a href="#" id="portfolio"
                 class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Portfolio</a>
             </li>
             <li>
@@ -201,12 +200,13 @@
       </div>
     </nav>
   </header>
+  
 
 
   <section
     class="bg-white dark:bg-gray-900 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern.svg')] dark:bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')]">
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative">
-      <a href="#"
+      <a href="https://github.com/repoleved08"
         class="inline-flex justify-between items-center py-1 px-1 pe-4 mb-7 text-sm text-blue-700 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800">
         <span class="text-xs bg-blue-600 rounded-full text-white px-4 py-1.5 me-3">Repos</span>
         <span class="text-sm font-medium">Check my GitHub repos</span>
@@ -229,7 +229,7 @@
       </p>
 
       <!-- CV Download Button -->
-      <a href="/src/NormanCv.pdf" download
+      <a href="./assets/NormanCv.pdf" download
         class="inline-block mt-6 px-8 py-3 text-lg font-medium text-white bg-blue-600 rounded-full shadow-md hover:bg-blue-700 neon-glow focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">
         Download My CV
       </a>
@@ -335,7 +335,7 @@
             <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
               <h2 class="text-2xl font-semibold text-neon-green neon-glow-green">BSc in Information Technology</h2>
               <p class="mt-2 text-gray-600 dark:text-gray-400">Karatina University, 2019 - 2023</p>
-              <p class="mt-2">Graduated with a degree in Information Technology. Focused on software development,
+              <p class="mt-2 text-gray-700 dark:text-gray-400 ">Graduated with a degree in Information Technology. Focused on software development,
                 database management, and networking.</p>
             </div>
           </div>
@@ -348,7 +348,7 @@
             <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
               <h2 class="text-2xl font-semibold text-neon-blue neon-glow-blue">Cybersecurity Course</h2>
               <p class="mt-2 text-gray-600 dark:text-gray-400">Hack The Box, 2024</p>
-              <p class="mt-2">Completed a comprehensive course on cybersecurity, covering topics such as ethical
+              <p class="mt-2 text-gray-700 dark:text-gray-400">Completed a comprehensive course on cybersecurity, covering topics such as ethical
                 hacking, network security, and incident response.</p>
             </div>
           </div>
@@ -361,7 +361,7 @@
             <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
               <h2 class="text-2xl font-semibold text-neon-purple neon-glow-purple">Golang Course</h2>
               <p class="mt-2 text-gray-600 dark:text-gray-400">Code Mastery, 2024</p>
-              <p class="mt-2">Completed an advanced course on Golang, learning about concurrency, web development, and
+              <p class="mt-2 text-gray-700 dark:text-gray-400">Completed an advanced course on Golang, learning about concurrency, web development, and
                 best practices in the Go ecosystem.</p>
             </div>
           </div>
@@ -380,7 +380,7 @@
   <section>
     <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
       <div class="max-w-2xl mx-auto text-center">
-        <h2
+        <h2 id="portfolio"
           class="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white neon-gloww">
           My Work
         </h2>
@@ -514,7 +514,7 @@
           <!-- Email Link with Icon -->
           <a href="mailto:techxtrasol.design@gmail.com"
           class="flex items-center text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 dark:bg-blue-500 dark:hover:bg-blue-600 focus:outline-none dark:focus:ring-blue-800 neon-glow hover:scale-105 transition-transform duration-300">
-          <i class="fas fa-envelope text-lg mr-2"></i>
+          <i class="fas fa-envelope text-md mr-2"></i>
           <span>Email Me</span>
         </a>
         </div>
@@ -531,9 +531,9 @@
       <div class="sm:flex sm:items-center sm:justify-between">
         <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
           <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-            <span class="text-neon-green neon-glow">&lt;</span>
+            <span class="text-neon-green neon-gloww">&lt;</span>
             norman_bii
-            <span class="text-neon-pink neon-glow">/&gt;</span>
+            <span class="text-neon-pink neon-gloww">/&gt;</span>
           </span>
         </a>
         <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
@@ -552,8 +552,8 @@
         </ul>
       </div>
       <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/"
-          class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#"
+          class="hover:underline">Norman™</a>. All Rights Reserved.</span>
     </div>
   </footer>
 

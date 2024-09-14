@@ -8,6 +8,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <script src="https://kit.fontawesome.com/64d306af7b.js" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <style>
     .neon-glow {
@@ -19,6 +21,14 @@
 
     .neon-gloww {
       text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.8);
+    }
+
+    .neon-glow {
+      box-shadow: 0 0 15px rgba(0, 162, 255, 0.6), 0 0 45px rgba(0, 162, 255, 0.4);
+    }
+
+    .dark .neon-glow {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 45px rgba(255, 255, 255, 0.4);
     }
 
     .neon-glow-green {
@@ -40,88 +50,99 @@
     .text-neon-pink {
       color: #ff007f;
     }
+
     .neon-glow {
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 255, 255, 0.8);
-        }
-        .rotating-arrow {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            border-radius: 8px;
-            pointer-events: none;
-            border-top-color: transparent;
-            animation: rotate 3s linear infinite;
-        }
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .card {
-            position: relative;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            overflow: hidden;
-        }
-        .card-content {
-            position: relative;
-            z-index: 10;
-        }
-         /* Custom styles for glowing effect */
-         .card {
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out;
-        }
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 255, 255, 0.8);
+    }
 
-        .card:hover {
-            transform: scale(1.05);
-        }
+    .rotating-arrow {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 8px;
+      pointer-events: none;
+      border-top-color: transparent;
+      animation: rotate 3s linear infinite;
+    }
 
-        .card-content {
-            position: relative;
-            background: #f9fafb;
-            border-radius: 0.75rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
-        }
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
 
-        .card:hover .card-content {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
 
-        .card:before,
-        .card:after {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(225deg, #89ff00, #010615, #00bcd4);
-            z-index: -1;
-            filter: blur(40px);
-            transition: background 0.5s ease;
-        }
+    .card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
 
-        .card:nth-child(2):before,
-        .card:nth-child(2):after {
-            background: linear-gradient(225deg, #ff005e, #010615, #fbff00);
-        }
+    .card-content {
+      position: relative;
+      z-index: 10;
+    }
 
-        .card:nth-child(3):before,
-        .card:nth-child(3):after {
-            background: linear-gradient(225deg, #dd6300, #010615, #2196f3);
-        }
+    /* Custom styles for glowing effect */
+    .card {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+    }
 
-        .card:hover:before,
-        .card:hover:after {
-            background: linear-gradient(225deg, #00bcd4, #010615, #89ff00);
-        }
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-content {
+      position: relative;
+      background: #f9fafb;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover .card-content {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card:before,
+    .card:after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(225deg, #89ff00, #010615, #00bcd4);
+      z-index: -1;
+      filter: blur(40px);
+      transition: background 0.5s ease;
+    }
+
+    .card:nth-child(2):before,
+    .card:nth-child(2):after {
+      background: linear-gradient(225deg, #ff005e, #010615, #fbff00);
+    }
+
+    .card:nth-child(3):before,
+    .card:nth-child(3):after {
+      background: linear-gradient(225deg, #dd6300, #010615, #2196f3);
+    }
+
+    .card:hover:before,
+    .card:hover:after {
+      background: linear-gradient(225deg, #00bcd4, #010615, #89ff00);
+    }
   </style>
 </head>
 
@@ -139,7 +160,10 @@
         </a>
         <div class="flex items-center lg:order-2">
           <a href="#"
-            class="text-white lg:mx-3 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Resume</a>
+            class="text-white lg:mx-3 bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-500 dark:hover:bg-blue-600 focus:outline-none dark:focus:ring-blue-800 neon-glow hover:scale-105 transition-transform duration-300">
+            Resume
+          </a>
+
           <button data-collapse-toggle="mobile-menu-2" type="button"
             class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="mobile-menu-2" aria-expanded="false">
@@ -185,7 +209,7 @@
       <a href="#"
         class="inline-flex justify-between items-center py-1 px-1 pe-4 mb-7 text-sm text-blue-700 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800">
         <span class="text-xs bg-blue-600 rounded-full text-white px-4 py-1.5 me-3">Repos</span>
-        <span class="text-sm font-medium">Check my github repos</span>
+        <span class="text-sm font-medium">Check my GitHub repos</span>
         <svg class="w-2.5 h-2.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
           viewBox="0 0 6 10">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -193,241 +217,271 @@
         </svg>
       </a>
 
-      <!-- Minimal introduction -->
+      <!-- About Me Section -->
       <h1
-        class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white neon-gloww">
         Golang & Vue Developer
       </h1>
       <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200">
-        I create modern web applications using Golang for the backend and Vue for the frontend.
+        I'm a passionate developer with expertise in creating high-performance web applications. I specialize in
+        backend development using Golang and front-end development with Vue, aiming to deliver seamless digital
+        experiences.
       </p>
 
-      <!-- Profile image with glowing effect -->
-      <div class="relative mx-auto w-48 h-48">
+      <!-- CV Download Button -->
+      <a href="/src/NormanCv.pdf" download
+        class="inline-block mt-6 px-8 py-3 text-lg font-medium text-white bg-blue-600 rounded-full shadow-md hover:bg-blue-700 neon-glow focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">
+        Download My CV
+      </a>
+
+      <!-- Profile Image -->
+      <div class="relative mx-auto w-48 h-48 mt-8">
         <img src="./assets/norman.png" alt="Your Profile"
           class="w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-900">
         <div
           class="absolute inset-0 rounded-full border-[8px] border-transparent border-t-blue-500 border-r-green-500 border-b-pink-500 border-l-yellow-500 animate-spin">
         </div>
       </div>
-
     </div>
+
     <div
       class="bg-gradient-to-b from-blue-50 to-transparent dark:from-blue-900 w-full h-full absolute top-0 left-0 z-0">
     </div>
+
+    </div>
+
+    <!-- Languages I am good at-->
+    <section class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+      <h2 class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white neon-gloww">
+        What I am good at
+      </h2>
+      <p class="mb-8 text-lg text-gray-500 dark:text-gray-400">Languages and tools I use to build projects:</p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mt-8">
+        <!-- Golang -->
+        <div
+          class="flex flex-col items-center justify-center p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-golang text-6xl text-blue-600 animate-bounce"></i>
+          <span class="mt-4 text-lg font-semibold text-gray-900 dark:text-white">Golang</span>
+        </div>
+
+        <!-- Vue.js -->
+        <div
+          class="flex flex-col items-center justify-center p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-vuejs text-6xl text-green-500 animate-bounce"></i>
+          <span class="mt-4 text-lg font-semibold text-gray-900 dark:text-white">Vue.js</span>
+        </div>
+
+        <!-- Python -->
+        <div
+          class="flex flex-col items-center justify-center p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-python text-6xl text-yellow-400 animate-bounce"></i>
+          <span class="mt-4 text-lg font-semibold text-gray-900 dark:text-white">Python</span>
+        </div>
+
+        <!-- C# -->
+        <div
+          class="flex flex-col items-center justify-center p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-microsoft text-6xl text-gray-700 dark:text-gray-300 animate-bounce"></i>
+          <span class="mt-4 text-lg font-semibold text-gray-900 dark:text-white">C#</span>
+        </div>
+
+        <!-- HTML5 -->
+        <div
+          class="flex flex-col items-center justify-center p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-html5 text-6xl text-orange-600 animate-bounce"></i>
+          <span class="mt-4 text-lg font-semibold text-gray-900 dark:text-white">HTML5</span>
+        </div>
+
+        <!-- Tailwind CSS -->
+        <div
+          class="flex flex-col items-center justify-center p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-code text-6xl text-teal-400 animate-bounce"></i>
+          <span class="mt-4 text-lg font-semibold text-gray-900 dark:text-white">Tailwind CSS</span>
+        </div>
+
+        <!-- Flutter -->
+        <div
+          class="flex flex-col items-center justify-center p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-flutter text-6xl text-blue-400 animate-bounce"></i>
+          <span class="mt-4 text-lg font-semibold text-gray-900 dark:text-white">Flutter</span>
+        </div>
+
+        <!-- JavaScript -->
+        <div
+          class="flex flex-col items-center justify-center p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+          <i class="fab fa-js-square text-6xl text-yellow-500 animate-bounce "></i>
+          <span class="mt-4 text-lg font-semibold text-gray-900 dark:text-white">JavaScript</span>
+        </div>
+      </div>
+    </section>
+    <!-- End languages-->
 
     <!--  Education background -->
 
     <div class="flex items-center justify-center min-h-screen py-12 px-4">
       <div class="max-w-4xl w-full">
-          <h1 class="text-4xl font-bold mb-8 text-center neon-glow-green">Education Timeline</h1>
-          <div class="relative border-l border-gray-300 dark:border-gray-700">
-              <div class="absolute w-3.5 h-3.5 bg-neon-blue rounded-full left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-
-              <div class="mb-8 ml-6">
-                  <div class="flex items-center mb-4">
-                      <div class="w-4 h-4 bg-neon-green rounded-full"></div>
-                      <div class="flex-grow ml-4 border-t border-gray-300 dark:border-gray-700"></div>
-                  </div>
-                  <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
-                      <h2 class="text-2xl font-semibold text-neon-green neon-glow-green">BSc in Information Technology</h2>
-                      <p class="mt-2 text-gray-600 dark:text-gray-400">University of XYZ, 2018 - 2022</p>
-                      <p class="mt-2">Graduated with a degree in Information Technology. Focused on software development, database management, and networking.</p>
-                  </div>
-              </div>
-
-              <div class="mb-8 ml-6">
-                  <div class="flex items-center mb-4">
-                      <div class="w-4 h-4 bg-neon-blue rounded-full"></div>
-                      <div class="flex-grow ml-4 border-t border-gray-300 dark:border-gray-700"></div>
-                  </div>
-                  <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
-                      <h2 class="text-2xl font-semibold text-neon-blue neon-glow-blue">Cybersecurity Course</h2>
-                      <p class="mt-2 text-gray-600 dark:text-gray-400">Certify Academy, 2023</p>
-                      <p class="mt-2">Completed a comprehensive course on cybersecurity, covering topics such as ethical hacking, network security, and incident response.</p>
-                  </div>
-              </div>
-
-              <div class="ml-6">
-                  <div class="flex items-center mb-4">
-                      <div class="w-4 h-4 bg-neon-purple rounded-full"></div>
-                      <div class="flex-grow ml-4 border-t border-gray-300 dark:border-gray-700"></div>
-                  </div>
-                  <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
-                      <h2 class="text-2xl font-semibold text-neon-purple neon-glow-purple">Golang Course</h2>
-                      <p class="mt-2 text-gray-600 dark:text-gray-400">Code Mastery, 2024</p>
-                      <p class="mt-2">Completed an advanced course on Golang, learning about concurrency, web development, and best practices in the Go ecosystem.</p>
-                  </div>
-              </div>
+        <h1 class="text-4xl font-bold mb-8 text-center neon-glow-green">Education Timeline</h1>
+        <div class="relative border-l border-gray-300 dark:border-gray-700">
+          <div
+            class="absolute w-3.5 h-3.5 bg-neon-blue rounded-full left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           </div>
+
+          <div class="mb-8 ml-6">
+            <div class="flex items-center mb-4">
+              <div class="w-4 h-4 bg-neon-green rounded-full"></div>
+              <div class="flex-grow ml-4 border-t border-gray-300 dark:border-gray-700"></div>
+            </div>
+            <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+              <h2 class="text-2xl font-semibold text-neon-green neon-glow-green">BSc in Information Technology</h2>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">Karatina University, 2019 - 2023</p>
+              <p class="mt-2">Graduated with a degree in Information Technology. Focused on software development,
+                database management, and networking.</p>
+            </div>
+          </div>
+
+          <div class="mb-8 ml-6">
+            <div class="flex items-center mb-4">
+              <div class="w-4 h-4 bg-neon-blue rounded-full"></div>
+              <div class="flex-grow ml-4 border-t border-gray-300 dark:border-gray-700"></div>
+            </div>
+            <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+              <h2 class="text-2xl font-semibold text-neon-blue neon-glow-blue">Cybersecurity Course</h2>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">Hack The Box, 2024</p>
+              <p class="mt-2">Completed a comprehensive course on cybersecurity, covering topics such as ethical
+                hacking, network security, and incident response.</p>
+            </div>
+          </div>
+
+          <div class="ml-6">
+            <div class="flex items-center mb-4">
+              <div class="w-4 h-4 bg-neon-purple rounded-full"></div>
+              <div class="flex-grow ml-4 border-t border-gray-300 dark:border-gray-700"></div>
+            </div>
+            <div class="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+              <h2 class="text-2xl font-semibold text-neon-purple neon-glow-purple">Golang Course</h2>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">Code Mastery, 2024</p>
+              <p class="mt-2">Completed an advanced course on Golang, learning about concurrency, web development, and
+                best practices in the Go ecosystem.</p>
+            </div>
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
 
     <!--  End education background -->
   </section>
 
 
 
+
+
   <!-- Past tasks portfolio -->
   <section>
     <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
-        <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white neon-glow">
-                Our Work
-            </h2>
-            <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
-                Crafted with skill and care to help our clients grow their business!
+      <div class="max-w-2xl mx-auto text-center">
+        <h2
+          class="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white neon-gloww">
+          My Work
+        </h2>
+        <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+          Crafted with skill and care to help our clients grow their business!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="space-y-4 relative card">
+          <div class="rotating-arrow"></div>
+          <div class="card-content p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+            <span
+              class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+              CodesAI.net.
+            </span>
+            <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white neon-gloww">
+              Official website
+            </h3>
+            <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
+              Laravel project for tutoring courses and embedded LMS
             </p>
+            <a href="https://codesai.net" title=""
+              class=" bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              role="button">
+              View case study
+              <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="space-y-4 relative card">
-                <div class="rotating-arrow"></div>
-                <div class="card-content p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
-                    <span class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                        Alphabet Inc.
-                    </span>
-                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white neon-glow">
-                        Official website
-                    </h3>
-                    <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-                        Flowbite helps you connect with friends, family, and communities of people who share your interests.
-                    </p>
-                    <a href="#" title="" class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" role="button">
-                        View case study
-                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="space-y-4 relative card">
-                <div class="rotating-arrow"></div>
-                <div class="card-content p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
-                    <span class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                        Microsoft Corp.
-                    </span>
-                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white neon-glow">
-                        Management system
-                    </h3>
-                    <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-                        Flowbite helps you connect with friends, family, and communities of people who share your interests.
-                    </p>
-                    <a href="#" title="" class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" role="button">
-                        View case study
-                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="space-y-4 relative card">
-                <div class="rotating-arrow"></div>
-                <div class="card-content p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
-                    <span class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                        Adobe Inc.
-                    </span>
-                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white neon-glow">
-                        Logo design
-                    </h3>
-                    <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-                        Flowbite helps you connect with friends, family, and communities of people who share your interests.
-                    </p>
-                    <a href="#" title="" class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" role="button">
-                        View case study
-                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
+        <div class="space-y-4 relative card">
+          <div class="rotating-arrow"></div>
+          <div class="card-content p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+            <span
+              class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+              x10aibots.
+            </span>
+            <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white neon-gloww">
+              Ecommerce system
+            </h3>
+            <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
+              Ecommerce system for selling trading bots online
+            </p>
+            <a href="https://x10aibots.com" title=""
+              class=" bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              role="button">
+              View their website
+              <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
         </div>
+
+        <div class="space-y-4 relative card">
+          <div class="rotating-arrow"></div>
+          <div class="card-content p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+            <span
+              class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+              Techxtrasol.
+            </span>
+            <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white neon-gloww">
+              Saas Project
+            </h3>
+            <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
+              Saas project focused on AI and other current trends in technology.
+            </p>
+            <a href="#" title=""
+              class=" bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              role="button">
+              View the site
+              <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="https://techx-vue-saas.vercel.app"
+                viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
   <!--  End of past tasks portfolio -->
 
-  <section>
-    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
-        <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white neon-glow">
-                Our Work
-            </h2>
-            <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
-                Crafted with skill and care to help our clients grow their business!
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="space-y-4 relative card">
-                <div class="card-content p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
-                    <span class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                        Alphabet Inc.
-                    </span>
-                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white neon-glow">
-                        Official website
-                    </h3>
-                    <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-                        Flowbite helps you connect with friends, family, and communities of people who share your interests.
-                    </p>
-                    <a href="#" title="" class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" role="button">
-                        View case study
-                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="space-y-4 relative card">
-                <div class="card-content p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
-                    <span class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                        Microsoft Corp.
-                    </span>
-                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white neon-glow">
-                        Management system
-                    </h3>
-                    <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-                        Flowbite helps you connect with friends, family, and communities of people who share your interests.
-                    </p>
-                    <a href="#" title="" class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" role="button">
-                        View case study
-                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="space-y-4 relative card">
-                <div class="card-content p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
-                    <span class="bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                        Adobe Inc.
-                    </span>
-                    <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white neon-glow">
-                        Logo design
-                    </h3>
-                    <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-                        Flowbite helps you connect with friends, family, and communities of people who share your interests.
-                    </p>
-                    <a href="#" title="" class="text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" role="button">
-                        View case study
-                        <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
   <!--  Contact form -->
   <section class="bg-white dark:bg-gray-900">
     <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
+      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center neon-gloww text-gray-900 dark:text-white">
+        Contact Us</h2>
       <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical issue?
         Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
       <form action="#" class="space-y-8">
@@ -435,7 +489,7 @@
           <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
           <input type="email" id="email"
             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-            placeholder="name@flowbite.com" required>
+            placeholder="name@gmail.com" required>
         </div>
         <div>
           <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
@@ -450,9 +504,22 @@
             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
             placeholder="Leave a comment..."></textarea>
         </div>
-        <button type="submit"
-          class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send
-          message</button>
+        <div class="mt-6 flex items-center justify-center space-x-4">
+          <!-- Send Message Button -->
+          <button
+            class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 dark:bg-blue-500 dark:hover:bg-blue-600 focus:outline-none dark:focus:ring-blue-800 neon-gloww hover:scale-105 transition-transform duration-300">
+            Send Message
+          </button>
+        
+          <!-- Email Link with Icon -->
+          <a href="mailto:techxtrasol.design@gmail.com"
+          class="flex items-center text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 dark:bg-blue-500 dark:hover:bg-blue-600 focus:outline-none dark:focus:ring-blue-800 neon-glow hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-envelope text-lg mr-2"></i>
+          <span>Email Me</span>
+        </a>
+        </div>
+        
+
       </form>
     </div>
   </section>

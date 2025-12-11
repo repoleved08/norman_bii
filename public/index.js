@@ -5,15 +5,7 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
   document.documentElement.classList.remove('dark')
 }
 
-// Whenever the user explicitly chooses light mode
-localStorage.theme = 'light'
-
-// Whenever the user explicitly chooses dark mode
-localStorage.theme = 'dark'
-
-localStorage.removeItem('theme')
-
-// toggle nav
+// Mobile navigation toggle
 
 document.addEventListener("DOMContentLoaded", function () {
   const toggleButton = document.querySelector("[data-collapse-toggle]");
@@ -40,26 +32,41 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// theme
-const themeToggleBtn = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-icon');
-const bodyElement = document.body;
-
-// Check for saved theme in localStorage
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme === 'dark') {
-  bodyElement.classList.add('dark');
-  themeIcon.classList.replace('fa-moon', 'fa-sun');
+// Initialize theme on page load
+function initializeTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    document.documentElement.classList.add('dark');
+    updateThemeIcon(true);
+  } else {
+    document.documentElement.classList.remove('dark');
+    updateThemeIcon(false);
+  }
 }
 
-// Toggle theme on button click
-themeToggleBtn.addEventListener('click', () => {
-  bodyElement.classList.toggle('dark');
-  if (bodyElement.classList.contains('dark')) {
-    themeIcon.classList.replace('fa-moon', 'fa-sun');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    themeIcon.classList.replace('fa-sun', 'fa-moon');
-    localStorage.setItem('theme', 'light');
+function updateThemeIcon(isDark) {
+  const themeIcon = document.getElementById('theme-icon');
+  if (themeIcon) {
+    if (isDark) {
+      themeIcon.className = 'fas fa-sun text-2xl text-yellow-400 dark:text-yellow-300';
+    } else {
+      themeIcon.className = 'fas fa-moon text-2xl text-gray-800 dark:text-gray-200';
+    }
+  }
+}
+
+// Theme toggle functionality
+document.addEventListener('DOMContentLoaded', () => {
+  initializeTheme();
+  
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateThemeIcon(isDark);
+    });
   }
 });

@@ -1,1 +1,12 @@
 node_modules
+node_modules/.cache
+.nuxt
+.nuxt
+.output
+.vercel
+dist
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example

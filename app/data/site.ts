@@ -1,0 +1,45 @@
+export const site = {
+  name: 'Norman Bii',
+  handle: 'norman_bii',
+  role: 'Lead Laravel Developer',
+  company: 'Favitech Solutions',
+  companyUrl: 'https://favitech.com',
+  studio: 'TechXtraSol',
+  studioUrl: 'https://techxtrasol.com',
+  location: 'Nairobi, Kenya',
+  timezone: 'EAT (UTC+3)',
+  email: 'techxtrasol.design@gmail.com',
+  resume: '/assets/NormanCv.pdf',
+  bookingUrl: 'https://cal.com/norman-bii-08/30min',
+  githubUser: 'repoleved08',
+  mediumUser: '@biinorman1',
+
+  headline: 'I build production-grade software that businesses depend on.',
+  heroSubline:
+    'Lead Laravel Developer at Favitech Solutions and founder of TechXtraSol. I design, build, and operate secure, scalable systems — financial platforms, ERPs, and real-time apps — used by real companies every day.',
+
+  socials: [
+    { name: 'GitHub', handle: '@repoleved08', url: 'https://github.com/repoleved08', icon: 'simple-icons:github' },
+    { name: 'LinkedIn', handle: 'norman-bii', url: 'https://www.linkedin.com/in/norman-bii-87382722a', icon: 'simple-icons:linkedin' },
+    { name: 'X', handle: '@NormanGeek1', url: 'https://x.com/NormanGeek1', icon: 'simple-icons:x' },
+    { name: 'Medium', handle: '@biinorman1', url: 'https://medium.com/@biinorman1', icon: 'simple-icons:medium' },
+  ] as const,
+
+  nav: [
+    { label: 'Work', to: '#work' },
+    { label: 'Stack', to: '#stack' },
+    { label: 'Experience', to: '#experience' },
+    { label: 'Open Source', to: '#open-source' },
+    { label: 'Blog', to: '#blog' },
+    { label: 'Contact', to: '#contact' },
+  ],
+
+  stats: [
+    { value: 5, suffix: '+', label: 'Years building software' },
+    { value: 20, suffix: '+', label: 'Systems shipped to production' },
+    { value: 7, suffix: '+', label: 'Domains — finance, ERP, real-time' },
+    { value: 3, suffix: '', label: 'Production apps I currently operate' },
+  ],
+} as const
+
+export type SocialLink = (typeof site.socials)[number]

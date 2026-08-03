@@ -27,4 +27,6 @@ onMounted(syncFromDom)
   </main>
 
   <LayoutAppFooter />
+
+  <UiRequestResumeModal />
 </template>

@@ -10,7 +10,6 @@ export const site = {
   timezone: 'EAT (UTC+3)',
   phone: '+254 714 000 481',
   email: 'biinorman1@gmail.com',
-  resume: '/assets/NormanCv.pdf',
   bookingUrl: 'https://cal.com/norman-bii-08/30min',
   githubUser: 'repoleved08',
   blogUrl: 'https://www.techxtrasol.tech/blog',

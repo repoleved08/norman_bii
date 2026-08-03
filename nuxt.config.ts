@@ -15,6 +15,23 @@ export default defineNuxtConfig({
     clientBundle: {
       scan: true,
       sizeLimitKb: 256,
+      icons: [
+        'lucide:alert-circle', 'lucide:arrow-down', 'lucide:arrow-right', 'lucide:arrow-up-right',
+        'lucide:bell', 'lucide:box', 'lucide:braces', 'lucide:building', 'lucide:building-2',
+        'lucide:calendar', 'lucide:check', 'lucide:check-circle-2', 'lucide:chevron-up', 'lucide:clock',
+        'lucide:code', 'lucide:copy', 'lucide:external-link', 'lucide:file-text', 'lucide:gauge',
+        'lucide:git-branch', 'lucide:git-fork', 'lucide:graduation-cap', 'lucide:loader-circle',
+        'lucide:lock-keyhole', 'lucide:mail', 'lucide:map-pin', 'lucide:menu', 'lucide:moon',
+        'lucide:network', 'lucide:phone', 'lucide:quote', 'lucide:radio-tower', 'lucide:refresh-cw',
+        'lucide:rocket', 'lucide:search', 'lucide:send', 'lucide:server', 'lucide:shield-check',
+        'lucide:sparkles', 'lucide:star', 'lucide:sun', 'lucide:upload', 'lucide:users',
+        'lucide:workflow', 'lucide:x',
+        'simple-icons:apache', 'simple-icons:azuredevops', 'simple-icons:css3', 'simple-icons:docker',
+        'simple-icons:github', 'simple-icons:githubactions', 'simple-icons:go', 'simple-icons:html5',
+        'simple-icons:huawei', 'simple-icons:javascript', 'simple-icons:laravel', 'simple-icons:linkedin',
+        'simple-icons:linux', 'simple-icons:mysql', 'simple-icons:nginx', 'simple-icons:nuxt',
+        'simple-icons:php', 'simple-icons:redis', 'simple-icons:vuedotjs', 'simple-icons:x',
+      ],
     },
   },
 
@@ -46,7 +63,7 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: 'en' },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
-      title: 'Norman Bii — Lead Laravel Developer',
+      title: 'Norman Bii — Senior Laravel Developer & Technical Lead',
       script: [
         {
           tagPriority: 'critical',

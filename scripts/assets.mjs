@@ -54,7 +54,7 @@ async function generateOg() {
   <text x="80" y="300" font-family="Inter, sans-serif" font-size="76" font-weight="700" fill="#ffffff">I build production-grade</text>
   <text x="80" y="390" font-family="Inter, sans-serif" font-size="76" font-weight="700" fill="url(#accent)">software businesses run on.</text>
 
-  <text x="80" y="470" font-family="Inter, sans-serif" font-size="30" fill="#9ba1ab">Lead Laravel Developer · Favitech Solutions · Founder of TechXtraSol</text>
+  <text x="80" y="470" font-family="Inter, sans-serif" font-size="30" fill="#9ba1ab">Senior Laravel Developer · Favitech Solutions · Founder of TechXtraSol</text>
   <text x="80" y="540" font-family="monospace" font-size="26" fill="#8b8f98">PHP · Laravel · Vue · Nuxt · Golang · Redis · WebSockets</text>
   <text x="1120" y="580" font-family="Inter, sans-serif" font-size="24" fill="#5b5f68" text-anchor="end">normanbii.dev</text>
 </svg>`

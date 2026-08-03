@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import { AnimatePresence, Motion } from 'motion-v'
 import { site } from '~/data/site'
+import { useResumeModal } from '~/composables/useResumeModal'
 
 const scrolled = ref(false)
 const open = ref(false)
 const sectionIds = ['home', 'work', 'stack', 'experience', 'open-source', 'blog', 'contact']
 const { active } = useActiveSection(sectionIds)
+const route = useRoute()
+const router = useRouter()
+const { openResumeModal } = useResumeModal()
 
 function onScroll() {
   scrolled.value = window.scrollY > 8
@@ -25,6 +29,16 @@ function isActive(to: string) {
   return active.value === target
 }
 
+function go(hash: string) {
+  open.value = false
+  if (route.path === '/') {
+    const el = document.querySelector(hash)
+    if (el) return el.scrollIntoView({ behavior: 'smooth' })
+    return router.push(hash)
+  }
+  return router.push({ path: '/', hash })
+}
+
 watch(open, (value) => {
   document.body.style.overflow = value ? 'hidden' : ''
 })
@@ -39,14 +53,15 @@ watch(open, (value) => {
       <LayoutLogo />
 
       <nav class="hidden items-center gap-1 lg:flex" aria-label="Primary">
-        <NuxtLink
+        <a
           v-for="item in nav"
           :key="item.to"
-          :to="item.to"
+          :href="item.to"
           class="rounded-md px-3 py-2 text-sm font-medium transition-colors"
           :class="isActive(item.to)
             ? 'text-ink'
             : 'text-muted hover:text-ink'"
+          @click.prevent="go(item.to)"
         >
           {{ item.label }}
           <span
@@ -54,21 +69,20 @@ watch(open, (value) => {
             class="absolute inset-x-3 -bottom-px h-px bg-brand-500"
             aria-hidden="true"
           />
-        </NuxtLink>
+        </a>
       </nav>
 
       <div class="flex items-center gap-2.5">
         <LayoutThemeToggle />
-        <BaseButton
-          href="/assets/NormanCv.pdf"
-          download
-          size="sm"
-          class="hidden sm:inline-flex"
-          aria-label="Download resume as PDF"
+        <button
+          type="button"
+          class="btn btn-primary text-sm px-3.5 py-2 rounded-lg hidden sm:inline-flex"
+          aria-label="Request resume"
+          @click="openResumeModal()"
         >
           Resume
-          <Icon name="lucide:download" class="h-3.5 w-3.5" />
-        </BaseButton>
+          <Icon name="lucide:file-text" class="h-3.5 w-3.5" />
+        </button>
         <button
           type="button"
           class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-line bg-surface text-ink lg:hidden"
@@ -92,20 +106,25 @@ watch(open, (value) => {
         class="border-t border-line bg-canvas/95 backdrop-blur-xl lg:hidden"
       >
         <nav class="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4 sm:px-6" aria-label="Mobile">
-          <NuxtLink
+          <a
             v-for="item in nav"
             :key="item.to"
-            :to="item.to"
+            :href="item.to"
             class="flex items-center justify-between rounded-lg px-3 py-3 text-base font-medium text-ink hover:bg-raised"
-            @click="open = false"
+            @click.prevent="go(item.to)"
           >
             {{ item.label }}
             <Icon name="lucide:arrow-up-right" class="h-4 w-4 text-faint" />
-          </NuxtLink>
+          </a>
           <div class="mt-2 flex gap-3">
-            <BaseButton href="/assets/NormanCv.pdf" download size="sm" class="w-full" @click="open = false">
-              Download Resume
-            </BaseButton>
+            <button
+              type="button"
+              class="btn btn-primary w-full text-sm px-3.5 py-2 rounded-lg"
+              @click="open = false; openResumeModal()"
+            >
+              <Icon name="lucide:file-text" class="h-3.5 w-3.5" />
+              Request Resume
+            </button>
           </div>
         </nav>
       </Motion>

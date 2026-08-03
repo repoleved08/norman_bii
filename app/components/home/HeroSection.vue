@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { Motion } from 'motion-v'
 import { site } from '~/data/site'
+import { useResumeModal } from '~/composables/useResumeModal'
+
+const { openResumeModal } = useResumeModal()
 
 const stats = [
   { value: 4, suffix: '+', label: 'Years building software' },
@@ -81,10 +84,14 @@ const lines = [
               View my work
               <Icon name="lucide:arrow-down" class="h-4 w-4" />
             </BaseButton>
-            <BaseButton href="/assets/NormanCv.pdf" download variant="ghost" size="lg">
+            <button
+              type="button"
+              class="btn btn-ghost px-5 py-3 text-[0.9375rem]"
+              @click="openResumeModal()"
+            >
               <Icon name="lucide:file-text" class="h-4 w-4" />
-              Download CV
-            </BaseButton>
+              Request CV
+            </button>
           </Motion>
 
           <Motion

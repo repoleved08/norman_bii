@@ -5,7 +5,18 @@ export default defineNuxtConfig({
 
   srcDir: 'app',
 
-  modules: ['@nuxt/fonts'],
+  modules: ['@nuxt/fonts', '@nuxt/icon'],
+
+  icon: {
+    mode: 'svg',
+    serverBundle: {
+      collections: ['lucide', 'simple-icons'],
+    },
+    clientBundle: {
+      scan: true,
+      sizeLimitKb: 256,
+    },
+  },
 
   css: ['~/assets/css/main.css'],
 

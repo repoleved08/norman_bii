@@ -5,6 +5,7 @@ const typeIcon: Record<string, string> = {
   work: 'lucide:briefcase',
   founder: 'lucide:rocket',
   education: 'lucide:graduation-cap',
+  intern: 'lucide:building',
   cert: 'lucide:award',
 }
 </script>

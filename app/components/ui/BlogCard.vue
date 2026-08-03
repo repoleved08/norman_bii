@@ -10,7 +10,7 @@ function formatDate(date: string) {
 
 <template>
   <a
-    :href="post.url ?? 'https://medium.com/@biinorman1'"
+    :href="post.url ?? 'https://www.techxtrasol.tech/blog'"
     target="_blank"
     rel="noreferrer noopener"
     class="card card-hover group flex h-full flex-col p-6"

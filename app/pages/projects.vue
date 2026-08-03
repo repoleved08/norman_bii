@@ -2,8 +2,8 @@
 import { projects } from '~/data/projects'
 
 useSeoMeta({
-  title: 'Projects — Norman Bii, Lead Laravel Developer',
-  description: 'Financial systems, ERPs, POS suites, real-time chat, and authentication platforms built and shipped to production by Norman Bii.',
+  title: 'Projects — Norman Bii, Senior Laravel Developer',
+  description: 'Financial systems, document management, POS suites, and SaaS platforms built and shipped to production by Norman Bii.',
   ogTitle: 'Projects — Norman Bii',
   ogType: 'website',
 })

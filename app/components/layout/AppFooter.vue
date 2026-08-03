@@ -11,7 +11,7 @@ const year = new Date().getFullYear()
         <div class="flex flex-col gap-5">
           <LayoutLogo />
           <p class="max-w-xs text-sm leading-relaxed text-muted">
-            Lead Laravel Developer building production-grade systems for businesses. Founder of TechXtraSol.
+            Senior Laravel Developer and Technical Lead building production-grade systems for businesses. Founder of TechXtraSol.
           </p>
           <div class="flex gap-3">
             <a
@@ -43,8 +43,8 @@ const year = new Date().getFullYear()
           <ul class="flex flex-col gap-2.5 text-sm text-muted">
             <li><a :href="site.socials[0].url" target="_blank" rel="noreferrer noopener" class="hover:text-ink">GitHub</a></li>
             <li><a :href="site.socials[1].url" target="_blank" rel="noreferrer noopener" class="hover:text-ink">LinkedIn</a></li>
-            <li><a :href="site.socials[2].url" target="_blank" rel="noreferrer noopener" class="hover:text-ink">X / Twitter</a></li>
-            <li><a :href="site.socials[3].url" target="_blank" rel="noreferrer noopener" class="hover:text-ink">Medium</a></li>
+            <li><a :href="site.socials[2].url" target="_blank" rel="noreferrer noopener" class="hover:text-ink">TechXtraSol</a></li>
+            <li><a :href="site.socials[3].url" target="_blank" rel="noreferrer noopener" class="hover:text-ink">X / Twitter</a></li>
           </ul>
         </nav>
 
@@ -63,7 +63,7 @@ const year = new Date().getFullYear()
       </div>
 
       <div class="mt-14 flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
-        <p class="text-xs text-faint">© {{ year }} {{ site.name }}. Built with Nuxt & Tailwind, deployed on Cloudflare.</p>
+        <p class="text-xs text-faint">© {{ year }} {{ site.name }}. Built with Nuxt & Tailwind, deployed on Vercel.</p>
         <p class="font-mono text-xs text-faint">
           <span class="text-brand-500">$</span> shippng_production_software <span class="animate-pulse-soft">▊</span>
         </p>

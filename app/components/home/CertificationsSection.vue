@@ -13,7 +13,7 @@ import { certifications } from '~/data/experience'
         />
       </BaseReveal>
 
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="grid gap-4 sm:grid-cols-2">
         <BaseReveal v-for="(cert, i) in certifications" :key="cert.name" :delay="i * 0.07">
           <div class="card card-hover group flex h-full flex-col p-5">
             <div class="flex items-center justify-between">

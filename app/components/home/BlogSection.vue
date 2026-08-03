@@ -16,7 +16,7 @@ const featured = computed(() => blogPosts.filter((p) => p.featured))
           />
         </BaseReveal>
         <BaseReveal :delay="0.15">
-          <BaseButton href="https://medium.com/@biinorman1" external variant="ghost" class="mb-12">
+          <BaseButton href="https://www.techxtrasol.tech/blog" external variant="ghost" class="mb-12">
             All articles
             <Icon name="lucide:arrow-up-right" class="h-4 w-4" />
           </BaseButton>

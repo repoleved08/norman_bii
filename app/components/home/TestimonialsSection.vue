@@ -7,13 +7,13 @@ import { testimonials } from '~/data/testimonials'
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
       <BaseReveal>
         <BaseSectionHeading
-          eyebrow="Testimonials"
-          title="What the people I ship with say"
-          description="Colleagues and clients I have built production systems with."
+          eyebrow="References"
+          title="People who can vouch for my work"
+          description="Professional referees listed on my CV. Contact details are provided on request."
         />
       </BaseReveal>
 
-      <div class="grid gap-5 md:grid-cols-3">
+      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
         <BaseReveal v-for="(t, i) in testimonials" :key="t.name" :delay="i * 0.1">
           <figure class="card flex h-full flex-col p-6">
             <Icon name="lucide:quote" class="h-5 w-5 text-brand-400" aria-hidden="true" />

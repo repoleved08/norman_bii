@@ -10,6 +10,13 @@ const channels = [
     hint: 'Best for detailed briefs',
   },
   {
+    icon: 'lucide:phone',
+    label: 'Phone',
+    value: site.phone,
+    href: `tel:${site.phone.replace(/\s/g, '')}`,
+    hint: 'Nairobi, East Africa time',
+  },
+  {
     icon: 'lucide:calendar',
     label: 'Book a call',
     value: '30-minute intro call',

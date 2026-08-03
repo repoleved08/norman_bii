@@ -24,7 +24,7 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'Please enter a valid email address.' })
   }
 
-  const toEmail = process.env.CONTACT_EMAIL || 'techxtrasol.design@gmail.com'
+  const toEmail = process.env.CONTACT_EMAIL || 'biinorman1@gmail.com'
   const html = `
     <h2>New inquiry from ${name}</h2>
     <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>

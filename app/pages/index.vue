@@ -5,9 +5,9 @@ import { projects } from '~/data/projects'
 const featured = computed(() => projects.filter((p) => p.featured))
 
 useSeoMeta({
-  title: 'Norman Bii — Lead Laravel Developer',
+  title: 'Norman Bii — Senior Laravel Developer & Technical Lead',
   description: site.heroSubline,
-  ogTitle: 'Norman Bii — Lead Laravel Developer',
+  ogTitle: 'Norman Bii — Senior Laravel Developer & Technical Lead',
   ogDescription: site.heroSubline,
   ogType: 'website',
   twitterCard: 'summary_large_image',

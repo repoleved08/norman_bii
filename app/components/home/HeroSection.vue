@@ -3,9 +3,9 @@ import { Motion } from 'motion-v'
 import { site } from '~/data/site'
 
 const stats = [
-  { value: 5, suffix: '+', label: 'Years building software' },
+  { value: 4, suffix: '+', label: 'Years building software' },
   { value: 20, suffix: '+', label: 'Systems shipped to production' },
-  { value: 7, suffix: '+', label: 'Domains — finance, ERP, real-time' },
+  { value: 7, suffix: '+', label: 'Domains — finance, retail, real-time' },
   { value: 3, suffix: '', label: 'Production apps operated today' },
 ]
 

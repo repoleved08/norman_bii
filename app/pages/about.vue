@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'About — Norman Bii, Lead Laravel Developer',
-  description: 'Norman Bii leads enterprise Laravel development at Favitech Solutions and founded TechXtraSol. Learn how he ships production software.',
+  title: 'About — Norman Bii, Senior Laravel Developer',
+  description: 'Norman Bii is a Senior Laravel Developer and Technical Lead at Favitech Solutions and founder of TechXtraSol. Learn how he ships production software.',
   ogTitle: 'About — Norman Bii',
   ogType: 'website',
 })

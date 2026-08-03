@@ -22,7 +22,7 @@ useSeoMeta({
             Articles from the production trenches
           </h1>
           <p class="max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-            Written for developers who ship — no fluff, no tutorials-for-views. Mostly on Medium.
+            Written for developers who ship — no fluff, no tutorials-for-views. Published on the TechXtraSol engineering blog.
           </p>
         </div>
       </BaseReveal>

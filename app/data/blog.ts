@@ -9,62 +9,90 @@ export interface BlogPost {
   featured?: boolean
 }
 
+const base = 'https://www.techxtrasol.tech/blog'
+
 export const blogPosts: BlogPost[] = [
   {
-    title: 'Idempotent Payments: Designing APIs That Survive Retries',
-    slug: 'idempotent-payments-apis',
+    title: 'Secret Management in Laravel with Infisical: A Practical Guide',
+    slug: 'infisical-secret-management-laravel',
     description:
-      'How to build webhook-safe payment flows with idempotency keys, unique constraints, and atomic updates — so a retried request never double-posts.',
-    date: '2025-06-12',
-    readingTime: '8 min',
-    tag: 'Backend',
-    featured: true,
-  },
-  {
-    title: 'Domain-Driven Design in Laravel Without the Hype',
-    slug: 'ddd-in-laravel',
-    description:
-      'A pragmatic take on bounded contexts, repositories, and observers in Laravel — what actually pays off in enterprise apps and what does not.',
-    date: '2025-04-02',
-    readingTime: '10 min',
-    tag: 'Architecture',
-    featured: true,
-  },
-  {
-    title: 'Scaling Laravel WebSockets Past One Server',
-    slug: 'scaling-laravel-websockets',
-    description:
-      'Running Laravel Reverb horizontally: Redis pub/sub, presence state across nodes, and how clients survive a server restart.',
-    date: '2025-02-18',
-    readingTime: '7 min',
-    tag: 'Real-time',
-    featured: true,
-  },
-  {
-    title: 'HashiCorp Vault for Laravel Apps: Secrets Without the Fear',
-    slug: 'vault-for-laravel',
-    description:
-      'Stop putting credentials in .env and config files. Dynamic, rotated secrets with Vault for production Laravel deployments.',
-    date: '2024-11-20',
-    readingTime: '9 min',
-    tag: 'Security',
-  },
-  {
-    title: 'Performance Tuning a Slow Laravel API',
-    slug: 'laravel-api-performance',
-    description:
-      'The checklist that took an enterprise API from 2.4s to ~300ms: N+1s, Redis caching, materialized views, and connection pools.',
-    date: '2024-09-30',
-    readingTime: '11 min',
-    tag: 'Performance',
-  },
-  {
-    title: 'Deploying Laravel to Production the Right Way',
-    slug: 'deploying-laravel-production',
-    description:
-      'Nginx, PHP-FPM tuning, Supervisor for queue workers, zero-downtime deploys, and the monitoring you actually need.',
-    date: '2024-08-14',
+      'How to use Infisical to manage secrets in Laravel applications — inject environment variables in local development, collaborate as a team, and deploy safely with CI/CD.',
+    date: '2026-08-02',
     readingTime: '12 min',
     tag: 'DevOps',
+    url: `${base}/infisical-secret-management-laravel`,
+    featured: true,
+  },
+  {
+    title: 'The Prompt Recipe: How to Talk to AI So It Actually Understands You',
+    slug: 'prompt-recipe-ai',
+    description:
+      'A practical framework for writing prompts that AI understands the first time — articulate context, coach ChatGPT to learn your domain, and personalise it to your stack and conventions.',
+    date: '2026-08-02',
+    readingTime: '10 min',
+    tag: 'AI & Automation',
+    url: `${base}/prompt-recipe-ai`,
+    featured: true,
+  },
+  {
+    title: 'Building Scalable Laravel Applications with Clean Architecture',
+    slug: 'building-scalable-laravel-applications',
+    description:
+      'Learn how to structure Laravel applications using repository pattern, service layers, and clean architecture principles that scale with your business.',
+    date: '2026-07-15',
+    readingTime: '8 min',
+    tag: 'Software Engineering',
+    url: `${base}/building-scalable-laravel-applications`,
+    featured: true,
+  },
+  {
+    title: "Nuxt 4: What's New and Why It Matters for Your Next Project",
+    slug: 'nuxt-4-whats-new',
+    description:
+      'A deep dive into Nuxt 4 features — improved performance, better TypeScript support, and new composables that streamline development.',
+    date: '2026-07-08',
+    readingTime: '6 min',
+    tag: 'Frontend',
+    url: `${base}/nuxt-4-whats-new`,
+  },
+  {
+    title: 'Integrating AI Chatbots into Business Systems: A Practical Guide',
+    slug: 'integrating-ai-chatbots',
+    description:
+      'How to build and deploy AI-powered chatbots that integrate with your existing business systems, knowledge bases, and workflows.',
+    date: '2026-07-01',
+    readingTime: '10 min',
+    tag: 'AI',
+    url: `${base}/integrating-ai-chatbots`,
+  },
+  {
+    title: 'M-Pesa Integration: Complete Guide for Kenyan Businesses',
+    slug: 'm-pesa-integration-guide',
+    description:
+      'Step-by-step guide to integrating M-Pesa payments into your web application, including STK Push, C2B, and B2C transactions.',
+    date: '2026-06-24',
+    readingTime: '12 min',
+    tag: 'Software Engineering',
+    url: `${base}/m-pesa-integration-guide`,
+  },
+  {
+    title: 'Docker for Developers: From Development to Production',
+    slug: 'docker-for-developers',
+    description:
+      'A practical guide to containerizing your applications with Docker, setting up CI/CD pipelines, and deploying to production.',
+    date: '2026-06-17',
+    readingTime: '9 min',
+    tag: 'DevOps',
+    url: `${base}/docker-for-developers`,
+  },
+  {
+    title: 'Digital Transformation for Kenyan SMEs: Where to Start',
+    slug: 'digital-transformation-kenyan-smes',
+    description:
+      'A roadmap for small and medium businesses in Kenya looking to digitize operations, automate workflows, and scale with technology.',
+    date: '2026-06-10',
+    readingTime: '7 min',
+    tag: 'Business Automation',
+    url: `${base}/digital-transformation-kenyan-smes`,
   },
 ]

@@ -10,10 +10,10 @@ const principles = [
 ]
 
 const currently = [
-  'Leading enterprise Laravel systems at Favitech Solutions',
-  'Scaling real-time apps on Laravel Reverb',
-  'Founding TechXtraSol — fintech, POS, and SaaS products',
-  'Mentoring developers on DDD and clean architecture',
+  'Leading Kredicore — an enterprise financial system processing live transactions',
+  'Shipping secure file management and RBAC across Favitech systems',
+  'Running TechXtraSol — client products, hosting, and the engineering blog',
+  'Mentoring junior developers and setting engineering standards',
 ]
 </script>
 
@@ -34,15 +34,16 @@ const currently = [
           <BaseReveal :delay="0.1">
             <div class="flex flex-col gap-5 text-base leading-relaxed text-muted">
               <p>
-                At <strong class="font-semibold text-ink">Favitech Solutions</strong> I lead development on
-                enterprise-grade Laravel applications — financial logic, document management, and ERP modules that
-                real companies run their business on. I make the architecture decisions, keep security and
-                performance honest, and deploy to production myself.
+                At <strong class="font-semibold text-ink">Favitech Solutions</strong> I am the Technical Lead on
+                enterprise-grade Laravel systems — Kredicore, an enterprise financial system processing live
+                transactions, plus document management and point-of-sale platforms that real companies run their
+                business on. I make the architecture decisions, keep security and performance honest, and deploy to
+                production myself.
               </p>
               <p>
                 Through <strong class="font-semibold text-ink">TechXtraSol</strong>, my own studio, I build products
                 for clients across fintech, retail, real-time communication, and education — taking full ownership
-                from system design to server administration.
+                from system design to server administration, and sharing what I learn on the engineering blog.
               </p>
               <p>
                 My tools span the backend — PHP, Laravel, Go, Redis, queues, WebSockets — and I choose them for one
@@ -74,7 +75,7 @@ const currently = [
                   <source :srcset="normanWebp" type="image/webp" />
                   <img
                     :src="normanPng"
-                    alt="Portrait of Norman Bii, Lead Laravel Developer"
+                    alt="Portrait of Norman Bii, Senior Laravel Developer"
                     class="h-full w-full object-cover"
                     loading="lazy"
                     decoding="async"
@@ -84,7 +85,7 @@ const currently = [
                   <div class="flex items-center justify-between">
                     <div>
                       <p class="font-display text-base font-semibold text-ink">Norman Bii</p>
-                      <p class="font-mono text-xs text-muted">Lead Laravel Developer · Nairobi, KE</p>
+                      <p class="font-mono text-xs text-muted">Senior Laravel Developer · Nairobi, KE</p>
                     </div>
                     <span class="flex items-center gap-1.5 rounded-full bg-success/10 px-2.5 py-1 font-mono text-[11px] text-success">
                       <span class="h-1.5 w-1.5 animate-pulse-soft rounded-full bg-success" />

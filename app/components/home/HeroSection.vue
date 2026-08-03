@@ -122,7 +122,7 @@ const lines = [
                 <span class="h-2.5 w-2.5 rounded-full bg-success/70" />
                 <span class="ml-3 font-mono text-xs text-faint">app/Http/Controllers/LedgerController.php</span>
               </div>
-              <div class="p-5 font-mono text-[13px] leading-[1.7]">
+              <div class="p-5 font-mono text-[13px] leading-[1.7] whitespace-pre">
                 <div
                   v-for="(line, i) in lines"
                   :key="i"

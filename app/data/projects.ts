@@ -19,19 +19,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: 'kredicore-financial-systems',
-    name: 'Kredicore Financial Systems',
-    client: 'Favitech Solutions Limited',
+    slug: 'enterprise-financial-platform',
+    name: 'Enterprise Financial Platform',
+    client: 'Enterprise client',
     role: 'Technical Lead',
     year: '2026',
     category: 'Fintech',
     summary:
-      'Mission-critical enterprise financial system processing live transactions for multiple clients and business units — with a full enterprise security stack and multi-tenant data isolation.',
+      'Mission-critical financial platform processing live transactions for multiple business units — with a full enterprise security stack and multi-tenant data isolation.',
     tech: ['Laravel', 'Vue 3', 'Redis', 'MySQL', 'Nginx', 'Apache'],
     highlights: [
-      'Lead the architecture end to end — data modeling, API structure, and module separation for a system handling real money in production.',
+      'Led architecture end to end — data modeling, API structure, and module separation for a system handling real money in production.',
       'Engineered Google Authenticator 2FA, enterprise RBAC, approval workflows, session controls, and audit logging across every financial module.',
-      'Architected multi-tenant data isolation so each client’s financial data stays segregated with independent permission hierarchies.',
+      'Architected multi-tenant data isolation so each client\'s financial data stays segregated with independent permission hierarchies.',
       'Refactored the codebase into clean service layers, reducing technical debt and improving separation of concerns.',
     ],
     challenges: [
@@ -53,8 +53,8 @@ export const projects: Project[] = [
   {
     slug: 'document-management-system',
     name: 'Document Management System',
-    client: 'Favitech Solutions Limited',
-    role: 'Designer & Full-Stack Builder',
+    client: 'Enterprise client',
+    role: 'Full-Stack Developer',
     year: '2025',
     category: 'Enterprise',
     summary:
@@ -75,18 +75,17 @@ export const projects: Project[] = [
       'Private Reverb channels for chat and notifications, RBAC scoping, and immutable activity logs for every document event.',
     ],
     metrics: [
-      { value: 'Live', label: 'dms.favitech.co.ke' },
+      { value: 'Real-time', label: 'collaboration' },
       { value: 'Resumable', label: 'chunk uploads' },
       { value: '100%', label: 'audit trail' },
     ],
-    liveUrl: 'https://dms.favitech.co.ke',
     featured: true,
     mockup: 'dms',
   },
   {
-    slug: 'ifastpos-multi-shop-pos',
-    name: 'IFastPOS — Multi-Shop Point of Sale',
-    client: 'Production client system',
+    slug: 'multi-shop-pos-system',
+    name: 'Multi-Shop POS System',
+    client: 'Production client',
     role: 'Full-Stack Developer',
     year: '2025',
     category: 'Retail',
@@ -108,11 +107,10 @@ export const projects: Project[] = [
       'Query optimization and service-layer refactors to cut load under peak transaction volume.',
     ],
     metrics: [
-      { value: 'Live', label: 'smarthub.ifastpos.com' },
       { value: 'Branch', label: 'data isolation' },
       { value: '~0', label: 'cross-branch leaks' },
+      { value: 'Hardened', label: 'auth & security' },
     ],
-    liveUrl: 'https://smarthub.ifastpos.com',
     featured: true,
     mockup: 'pos',
   },
@@ -124,7 +122,7 @@ export const projects: Project[] = [
     year: '2025',
     category: 'SaaS',
     summary:
-      'The TechXtraSol platform — a full Nuxt frontend with a Laravel API backend, resources hub, technical blog, and client contact portal, running on hardened infrastructure.',
+      'A full Nuxt frontend with a Laravel API backend, resources hub, technical blog, and client contact portal, running on hardened infrastructure.',
     tech: ['Nuxt', 'Vue 3', 'Laravel', 'Nginx', 'Linux', 'AI', 'Google APIs'],
     highlights: [
       'Designed, built, and deployed the Nuxt frontend and Laravel API backend — resources hub, technical blog, and client portal.',

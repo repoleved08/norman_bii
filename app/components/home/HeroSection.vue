@@ -148,16 +148,6 @@ const lines = [
                 </div>
               </div>
             </div>
-
-            <div class="card absolute -bottom-6 -left-6 hidden items-center gap-3 px-4 py-3 shadow-pop xl:flex">
-              <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-success/10 text-success">
-                <Icon name="lucide:server" class="h-4 w-4" />
-              </span>
-              <div>
-                <p class="text-xs font-semibold text-ink">Uptime</p>
-                <p class="font-mono text-xs text-success">99.9% · production</p>
-              </div>
-            </div>
           </div>
         </Motion>
       </div>

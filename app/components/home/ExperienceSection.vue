@@ -16,8 +16,8 @@ const typeIcon: Record<string, string> = {
       <BaseReveal>
         <BaseSectionHeading
           eyebrow="Experience"
-          title="Where I have shipped"
-          description="From leading enterprise teams to building my own products — a track record, not a list of keywords."
+          title="A track record of shipping"
+          description="From leading enterprise teams to building products — a track record, not a list of keywords."
         />
       </BaseReveal>
 

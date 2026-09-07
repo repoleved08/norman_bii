@@ -1,17 +1,14 @@
 <script setup lang="ts">
-import normanAvif from '~/assets/img/norman.avif'
-import normanWebp from '~/assets/img/norman.webp'
-import normanPng from '~/assets/img/norman.png'
 
 const principles = [
   { icon: 'lucide:shield-check', title: 'Security-first', text: 'Secrets, auth, and audit trails are designed in, not bolted on.' },
-  { icon: 'lucide:gauge', title: 'Performance is a feature', text: 'I measure, profile, and tune until production numbers hold up.' },
-  { icon: 'lucide:box', title: 'Own it end to end', text: 'Architecture, code, deployment, and the 2am alerts — I run the whole loop.' },
+  { icon: 'lucide:gauge', title: 'Performance is a feature', text: 'Measure, profile, and tune until production numbers hold up.' },
+  { icon: 'lucide:box', title: 'Own it end to end', text: 'Architecture, code, deployment, and the 2am alerts — the full loop.' },
 ]
 
 const currently = [
-  'Leading Kredicore — an enterprise financial system processing live transactions',
-  'Shipping secure file management and RBAC across Favitech systems',
+  'Leading an enterprise financial platform processing live transactions',
+  'Shipping secure file management and RBAC across enterprise systems',
   'Running TechXtraSol — client products, hosting, and the engineering blog',
   'Mentoring junior developers and setting engineering standards',
 ]
@@ -25,8 +22,7 @@ const currently = [
           <BaseReveal>
             <BaseSectionHeading eyebrow="About" title="Engineer who ships, operates, and owns the outcome">
               <template #default>
-                I am not a developer who hands off code and disappears. I take systems from an empty repository to
-                production on Linux servers — and I stay accountable for what happens after deploy.
+                Systems that go from an empty repository to production on Linux servers — with accountability for what happens after deploy.
               </template>
             </BaseSectionHeading>
           </BaseReveal>
@@ -34,19 +30,17 @@ const currently = [
           <BaseReveal :delay="0.1">
             <div class="flex flex-col gap-5 text-base leading-relaxed text-muted">
               <p>
-                At <strong class="font-semibold text-ink">Favitech Solutions</strong> I am the Technical Lead on
-                enterprise-grade Laravel systems — Kredicore, an enterprise financial system processing live
-                transactions, plus document management and point-of-sale platforms that real companies run their
-                business on. I make the architecture decisions, keep security and performance honest, and deploy to
-                production myself.
+                Currently Technical Lead at Favitech Solutions on enterprise-grade Laravel systems — a financial
+                platform processing live transactions, plus document management and point-of-sale products that real
+                companies run their business on. Working across architecture, security, and production deployment.
               </p>
               <p>
-                Through <strong class="font-semibold text-ink">TechXtraSol</strong>, my own studio, I build products
-                for clients across fintech, retail, real-time communication, and education — taking full ownership
-                from system design to server administration, and sharing what I learn on the engineering blog.
+                Through <strong class="font-semibold text-ink">TechXtraSol</strong>, a studio that builds
+                products for clients across fintech, retail, real-time communication, and education — taking full ownership
+                from system design to server administration, and sharing what is learned on the engineering blog.
               </p>
               <p>
-                My tools span the backend — PHP, Laravel, Go, Redis, queues, WebSockets — and I choose them for one
+                The toolset spans the backend — PHP, Laravel, Go, Redis, queues, WebSockets — chosen for one
                 reason: they carry load reliably in production.
               </p>
             </div>
@@ -70,17 +64,13 @@ const currently = [
             <div class="absolute -inset-4 rounded-3xl bg-gradient-to-br from-brand-500/15 to-accent-500/10 blur-xl" aria-hidden="true" />
             <figure class="card relative overflow-hidden shadow-pop">
               <div class="relative aspect-[4/4.6] overflow-hidden bg-raised">
-                <picture>
-                  <source :srcset="normanAvif" type="image/avif" />
-                  <source :srcset="normanWebp" type="image/webp" />
-                  <img
-                    :src="normanPng"
-                    alt="Portrait of Norman Bii, Senior Laravel Developer"
-                    class="h-full w-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
+                <img
+                  :src="'https://avatars.githubusercontent.com/u/88892542?v=4'"
+                  alt="Portrait of Norman Bii, Senior Laravel Developer"
+                  class="h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-canvas/90 to-transparent p-5">
                   <div class="flex items-center justify-between">
                     <div>

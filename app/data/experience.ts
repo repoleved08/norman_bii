@@ -18,16 +18,16 @@ export const experience: ExperienceItem[] = [
     type: 'work',
     current: true,
     description:
-      'Promoted from Junior Developer within six months based on technical contributions. Now own the architecture of Kredicore, an enterprise financial system processing live transactions.',
+      'Technical lead on an enterprise financial platform — combining hands-on architecture with team mentorship and engineering standards.',
     points: [
-      'Lead end-to-end architecture and development of Kredicore — an enterprise financial system processing live transactions — owning data modeling, API structure, and module separation.',
+      'Lead end-to-end development of an enterprise financial platform processing live transactions — owning data modeling, API structure, and module separation.',
       'Designed and implemented enterprise RBAC across financial modules, enforcing granular permission boundaries between user roles.',
       'Engineered Google Authenticator 2FA across all authentication flows, hardening account security for financial system users.',
       'Built multi-step approval workflows so sensitive financial operations pass structured authorization chains before execution.',
       'Architected session management with configurable timeouts, concurrent-session detection, and forced invalidation for compliance.',
       'Established audit logging across critical operations — capturing actor, action, timestamp, and affected record.',
       'Shipped a secure internal file management system with role-based document access, adopted company-wide.',
-      'Mentor junior developers, review pull requests, and set coding standards across the team.',
+      'Mentor a team of junior developers, run code reviews, and define coding standards the whole team follows.',
     ],
   },
   {
@@ -41,7 +41,7 @@ export const experience: ExperienceItem[] = [
     points: [
       'Designed and built the internal file management system from scratch — uploads, categorization, access control, and retrieval — adopted company-wide.',
       'Delivered bug fixes, feature additions, and backend API improvements across production systems with zero downtime incidents.',
-      'Worked closely with senior engineers, rapidly gaining domain knowledge in enterprise-grade financial software and secure system design.',
+      'Collaborated with senior engineers and QA to ship features under production deadlines, taking on technical feedback fast and building deep domain knowledge in enterprise financial software.',
     ],
   },
   {

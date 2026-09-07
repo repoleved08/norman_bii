@@ -8,8 +8,8 @@ import { techStack, marqueeTech } from '~/data/tech'
       <BaseReveal>
         <BaseSectionHeading
           eyebrow="Tech Stack"
-          title="Tools I reach for in production"
-          description="Chosen for reliability under real load — not for hype. Each category represents systems I have shipped and operated."
+          title="Tools reached for in production"
+          description="Chosen for reliability under real load — not for hype. Each category represents systems shipped and operated."
         />
       </BaseReveal>
 

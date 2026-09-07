@@ -12,7 +12,7 @@ const featured = computed(() => blogPosts.filter((p) => p.featured))
           <BaseSectionHeading
             eyebrow="Writing"
             title="Notes from production"
-            description="Writing on architecture, security, and performance — the problems I hit shipping real systems."
+            description="Writing on architecture, security, and performance — problems hit while shipping real systems."
           />
         </BaseReveal>
         <BaseReveal :delay="0.15">

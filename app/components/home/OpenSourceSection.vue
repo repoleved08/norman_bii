@@ -28,7 +28,7 @@ const loading = computed(() => status.value === 'pending')
       <BaseReveal>
         <BaseSectionHeading
           eyebrow="Open Source"
-          title="Code I share with the community"
+          title="Code shared with the community"
           description="Libraries, skeletons, and battle-tested configs from real production work — published so others can skip the hard part."
         />
       </BaseReveal>

@@ -46,7 +46,7 @@ const channels = [
             <BaseSectionHeading
               eyebrow="Contact"
               title="Let's build something that runs in production"
-              description="Whether you are hiring, need a system built, or want to talk architecture — my inbox is open."
+              description="Whether you are hiring, need a system built, or want to talk architecture — the inbox is open."
             />
           </BaseReveal>
 

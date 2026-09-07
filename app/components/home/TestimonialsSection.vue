@@ -8,8 +8,8 @@ import { testimonials } from '~/data/testimonials'
       <BaseReveal>
         <BaseSectionHeading
           eyebrow="References"
-          title="People who can vouch for my work"
-          description="Professional referees listed on my CV. Contact details are provided on request."
+          title="People who can vouch for the work"
+          description="Professional referees listed on the CV. Contact details are provided on request."
         />
       </BaseReveal>
 

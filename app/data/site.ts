@@ -14,9 +14,9 @@ export const site = {
   githubUser: 'repoleved08',
   blogUrl: 'https://www.techxtrasol.tech/blog',
 
-  headline: 'I build production-grade software that businesses depend on.',
+  headline: 'Production-grade software that businesses depend on.',
   heroSubline:
-    'Senior Laravel Developer and Technical Lead with 4+ years shipping enterprise systems — leading the architecture of Kredicore, a financial platform processing live transactions, and founder of TechXtraSol. Secure, scalable, and built to survive production.',
+    'Senior Laravel Developer and Technical Lead with 4+ years shipping enterprise systems across finance, retail, and real-time platforms. Founder of TechXtraSol. Secure, scalable, and built to survive production.',
 
   socials: [
     { name: 'GitHub', handle: '@repoleved08', url: 'https://github.com/repoleved08', icon: 'simple-icons:github' },
@@ -38,7 +38,7 @@ export const site = {
     { value: 4, suffix: '+', label: 'Years building software' },
     { value: 20, suffix: '+', label: 'Systems shipped to production' },
     { value: 7, suffix: '+', label: 'Domains — finance, ERP, real-time' },
-    { value: 3, suffix: '', label: 'Production apps I currently operate' },
+    { value: 3, suffix: '', label: 'Production apps operated today' },
   ],
 } as const
 

@@ -9,7 +9,7 @@ useSeoMeta({
 
 <template>
   <div>
-    <div class="mx-auto max-w-6xl px-4 pb-8 pt-32 sm:px-6">
+    <div class="mx-auto max-w-6xl px-4 pt-32 sm:px-6">
       <BaseReveal>
         <div class="flex flex-col gap-3">
           <div class="flex items-center gap-2">
@@ -17,7 +17,7 @@ useSeoMeta({
             <span class="h-px w-8 bg-gradient-to-r from-brand-500 to-transparent" aria-hidden="true" />
           </div>
           <h1 class="font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-            The full story behind the systems
+            <UiDecryptText text="About Norman Bii" />
           </h1>
         </div>
       </BaseReveal>

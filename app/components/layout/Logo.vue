@@ -1,7 +1,7 @@
 <template>
   <NuxtLink to="/" class="group flex items-center gap-2.5" aria-label="Norman Bii — home">
     <span
-      class="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-400 to-brand-600 font-display text-sm font-bold text-white shadow-glow"
+      class="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-500 font-display text-sm font-bold text-canvas shadow-glow"
     >
       NB
     </span>

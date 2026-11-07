@@ -17,8 +17,8 @@ withDefaults(
         <span class="eyebrow">{{ eyebrow }}</span>
         <span class="h-px w-8 bg-gradient-to-r from-brand-500 to-transparent" aria-hidden="true" />
       </div>
-      <h2 class="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
-        <slot name="title">{{ title }}</slot>
+      <h2 class="font-display text-3xl font-bold tracking-[-0.02em] text-ink sm:text-4xl lg:text-[2.75rem] lg:leading-[1.12]">
+        <slot name="title"><UiDecryptText :text="title" /></slot>
       </h2>
       <p v-if="$slots.default || description" class="max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
         <slot>{{ description }}</slot>

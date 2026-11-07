@@ -11,7 +11,7 @@ const year = new Date().getFullYear()
         <div class="flex flex-col gap-5">
           <LayoutLogo />
           <p class="max-w-xs text-sm leading-relaxed text-muted">
-            Senior Laravel Developer and Technical Lead building production-grade systems for businesses. Founder of TechXtraSol.
+            Technical lead for production Laravel systems. Financial workflows, access control, and accountable delivery.
           </p>
           <div class="flex gap-3">
             <a
@@ -59,6 +59,29 @@ const year = new Date().getFullYear()
               <a :href="site.bookingUrl" target="_blank" rel="noreferrer noopener" class="hover:text-ink">Book a call</a>
             </li>
           </ul>
+        </div>
+      </div>
+
+      <div class="mt-14 grid gap-6 rounded-xl border border-line-strong bg-canvas p-5 sm:p-7 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-10">
+        <div class="max-w-lg">
+          <p class="flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-widest text-redteam">
+            <span class="h-2 w-2 rounded-sm bg-redteam" aria-hidden="true" />
+            Offensive security / ethical hacking
+          </p>
+          <h3 class="mt-3 font-display text-xl font-bold text-ink sm:text-2xl">Think like an attacker. Build with intent.</h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted">
+            A red-team perspective helps me test assumptions and strengthen the systems I build. Security testing is always authorized.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-3" aria-label="Security tools">
+          <div class="flex min-w-0 flex-col items-center justify-center rounded-lg border border-redteam/20 bg-redteam/5 px-4 py-4 text-center sm:min-w-36 sm:px-6">
+            <Icon name="simple-icons:kalilinux" class="h-16 w-16 text-security-blue sm:h-20 sm:w-20" aria-hidden="true" />
+            <span class="mt-3 font-mono text-xs text-ink-dim">Kali Linux</span>
+          </div>
+          <div class="flex min-w-0 flex-col items-center justify-center rounded-lg border border-redteam/20 bg-redteam/5 px-4 py-4 text-center sm:min-w-36 sm:px-6">
+            <Icon name="simple-icons:parrotsecurity" class="h-16 w-16 text-security-blue sm:h-20 sm:w-20" aria-hidden="true" />
+            <span class="mt-3 font-mono text-xs text-ink-dim">Parrot Security</span>
+          </div>
         </div>
       </div>
 

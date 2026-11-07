@@ -16,7 +16,7 @@ export const site = {
 
   headline: 'Production-grade software that businesses depend on.',
   heroSubline:
-    'Senior Laravel Developer and Technical Lead with 4+ years shipping enterprise systems across finance, retail, and real-time platforms. Founder of TechXtraSol. Secure, scalable, and built to survive production.',
+    'I lead Laravel delivery for live financial systems: access control, 2FA, approvals, and audit trails included. Now building deeper security and secrets-management expertise with Infisical.',
 
   socials: [
     { name: 'GitHub', handle: '@repoleved08', url: 'https://github.com/repoleved08', icon: 'simple-icons:github' },
@@ -26,6 +26,7 @@ export const site = {
   ] as const,
 
   nav: [
+    { label: 'About', to: '/about' },
     { label: 'Work', to: '#work' },
     { label: 'Stack', to: '#stack' },
     { label: 'Experience', to: '#experience' },

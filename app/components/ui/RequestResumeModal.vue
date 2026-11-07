@@ -63,10 +63,18 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
         </span>
 
         <h2 id="resume-modal-title" class="mt-5 font-display text-xl font-bold text-ink">
-          Request my CV
+          The short version
         </h2>
         <p class="mt-2 text-sm leading-relaxed text-muted">
-          I keep my full CV up to date and share it on request. Email me and I will send it over — usually within a few hours.
+          Senior Laravel Developer & Technical Lead. I build and run financial systems where access, approvals, and accountability matter.
+        </p>
+        <ul class="mt-4 space-y-2 text-sm leading-relaxed text-ink-dim">
+          <li>• Live financial platform architecture and delivery</li>
+          <li>• RBAC, 2FA, approval workflows, and audit logging</li>
+          <li>• Client delivery and Linux deployments via TechXtraSol</li>
+        </ul>
+        <p class="mt-4 text-sm leading-relaxed text-muted">
+          Currently learning Infisical for secrets management. Want the full CV or to discuss a system you need built? Reach out directly.
         </p>
 
         <div class="mt-6 flex items-center gap-3 rounded-xl border border-line bg-raised p-3">
@@ -90,16 +98,13 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
             :href="`mailto:${site.email}?subject=${encodeURIComponent(`CV request — ${site.name}`)}`"
             class="btn btn-primary w-full"
           >
-            Email me for my CV
+            Request the full CV
             <Icon name="lucide:arrow-right" class="h-4 w-4" />
           </a>
-          <button
-            type="button"
-            class="btn btn-ghost w-full"
-            @click="closeResumeModal"
-          >
-            Not now
-          </button>
+          <a :href="site.bookingUrl" target="_blank" rel="noreferrer noopener" class="btn btn-ghost w-full">
+            Book a conversation
+            <Icon name="lucide:arrow-up-right" class="h-4 w-4" />
+          </a>
         </div>
       </Motion>
     </div>

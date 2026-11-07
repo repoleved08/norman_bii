@@ -28,9 +28,9 @@ export default defineNuxtConfig({
         'lucide:workflow', 'lucide:x',
         'simple-icons:apache', 'simple-icons:azuredevops', 'simple-icons:css3', 'simple-icons:docker',
         'simple-icons:github', 'simple-icons:githubactions', 'simple-icons:go', 'simple-icons:html5',
-        'simple-icons:huawei', 'simple-icons:javascript', 'simple-icons:laravel', 'simple-icons:linkedin',
+        'simple-icons:huawei', 'simple-icons:javascript', 'simple-icons:kalilinux', 'simple-icons:laravel', 'simple-icons:linkedin',
         'simple-icons:linux', 'simple-icons:mysql', 'simple-icons:nginx', 'simple-icons:nuxt',
-        'simple-icons:php', 'simple-icons:redis', 'simple-icons:vuedotjs', 'simple-icons:x',
+        'simple-icons:parrotsecurity', 'simple-icons:php', 'simple-icons:redis', 'simple-icons:vuedotjs', 'simple-icons:whatsapp', 'simple-icons:x',
       ],
     },
   },
@@ -48,29 +48,21 @@ export default defineNuxtConfig({
 
   fonts: {
     defaults: {
-      weights: [400, 500, 600, 700],
+      weights: [400, 500, 600, 700, 800],
       subsets: ['latin'],
     },
     families: [
-      { name: 'Inter', provider: 'google', weights: [400, 500, 600, 700, 800] },
-      { name: 'Space Grotesk', provider: 'google', weights: [500, 600, 700] },
-      { name: 'JetBrains Mono', provider: 'google', weights: [400, 500, 600] },
+      { name: 'JetBrains Mono', provider: 'google', weights: [400, 500, 600, 700, 800] },
     ],
   },
 
   app: {
     head: {
-      htmlAttrs: { lang: 'en' },
+      htmlAttrs: { lang: 'en', style: 'color-scheme: dark' },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
       title: 'Norman Bii — Senior Laravel Developer & Technical Lead',
-      script: [
-        {
-          tagPriority: 'critical',
-          innerHTML:
-            '(function(){try{var s=localStorage.getItem("nb-theme");var o=window.matchMedia("(prefers-color-scheme: light)").matches;var t=s||(o?"light":"dark");document.documentElement.classList.add(t);document.documentElement.style.colorScheme=t}catch(e){document.documentElement.classList.add("dark")}})()',
-        },
-      ],
+      meta: [{ name: 'theme-color', content: '#080a09' }],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'canonical', href: 'https://normanbii.dev/' },

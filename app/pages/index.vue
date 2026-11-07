@@ -24,7 +24,6 @@ useSeoMeta({
     <HomeOpenSourceSection />
     <HomeBlogSection />
     <HomeCertificationsSection />
-    <HomeTestimonialsSection />
     <HomeContactSection />
   </div>
 </template>

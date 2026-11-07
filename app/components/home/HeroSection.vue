@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { Motion } from 'motion-v'
 import { site } from '~/data/site'
-import { useResumeModal } from '~/composables/useResumeModal'
-
-const { openResumeModal } = useResumeModal()
 
 const stats = [
   { value: 4, suffix: '+', label: 'Years building software' },
@@ -29,12 +26,10 @@ const lines = [
 </script>
 
 <template>
-  <section id="home" class="relative overflow-hidden pt-28 sm:pt-36">
+  <section id="home" class="relative overflow-hidden border-b border-line pt-28 sm:pt-36">
     <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-      <div class="absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,black,transparent)] opacity-60" />
-      <div class="aurora left-[-10%] top-[-20%] h-[480px] w-[480px] bg-brand-600/30" />
-      <div class="aurora right-[-12%] top-[5%] h-[420px] w-[420px] bg-accent-500/20" style="animation-delay: -6s" />
-      <div class="aurora bottom-[-30%] left-[30%] h-[380px] w-[380px] bg-brand-400/20" style="animation-delay: -12s" />
+      <div class="absolute inset-0 bg-grid [mask-image:linear-gradient(to_bottom,black,transparent)] opacity-35" />
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_40%,#9fef0012,transparent_55%)]" />
     </div>
 
     <div class="relative mx-auto max-w-6xl px-4 sm:px-6">
@@ -54,13 +49,13 @@ const lines = [
             </div>
           </Motion>
 
-          <h1 class="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-ink sm:text-6xl lg:text-[4.25rem]">
+          <h1 class="mt-8 font-display text-4xl font-bold leading-[1.12] tracking-[-0.02em] text-ink sm:text-5xl lg:text-6xl">
             <Motion
               :initial="{ opacity: 0, y: 28, filter: 'blur(8px)' }"
               :animate="{ opacity: 1, y: 0, filter: 'blur(0px)' }"
               :transition="{ duration: 0.7, delay: 0.08, ease: [0.16, 1, 0.3, 1] }"
             >
-              I build <span class="text-gradient">production-grade</span> software that businesses depend on.
+              I build <span class="text-gradient"><UiDecryptText text="secure systems" /></span> businesses can trust in production.
             </Motion>
           </h1>
 
@@ -72,6 +67,10 @@ const lines = [
             <p class="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
               {{ site.heroSubline }}
             </p>
+            <p class="mt-5 inline-flex items-center gap-2 rounded-full border border-redteam/25 bg-redteam/5 px-3 py-1.5 font-mono text-xs text-redteam">
+              <span class="h-1.5 w-1.5 rounded-full bg-redteam" aria-hidden="true" />
+              Ethical red team / authorized testing
+            </p>
           </Motion>
 
           <Motion
@@ -80,18 +79,14 @@ const lines = [
             :transition="{ duration: 0.6, delay: 0.34, ease: [0.16, 1, 0.3, 1] }"
             class="mt-8 flex flex-wrap items-center gap-3"
           >
-            <BaseButton to="#work" variant="primary" size="lg">
-              View my work
+            <BaseButton to="#contact" variant="primary" size="lg">
+              Let's discuss your project
+              <Icon name="lucide:arrow-right" class="h-4 w-4" />
+            </BaseButton>
+            <BaseButton to="#work" variant="ghost" size="lg">
+              See the work
               <Icon name="lucide:arrow-down" class="h-4 w-4" />
             </BaseButton>
-            <button
-              type="button"
-              class="btn btn-ghost px-5 py-3 text-[0.9375rem]"
-              @click="openResumeModal()"
-            >
-              <Icon name="lucide:file-text" class="h-4 w-4" />
-              Request CV
-            </button>
           </Motion>
 
           <Motion
@@ -121,7 +116,7 @@ const lines = [
           class="hidden lg:block"
         >
           <div class="relative">
-            <div class="absolute -inset-6 rounded-3xl bg-gradient-to-br from-brand-500/20 via-transparent to-accent-500/10 blur-2xl" aria-hidden="true" />
+            <div class="absolute -inset-3 rounded-xl border border-brand-500/10" aria-hidden="true" />
             <div class="card relative overflow-hidden shadow-pop">
               <div class="flex items-center gap-2 border-b border-line px-4 py-3">
                 <span class="h-2.5 w-2.5 rounded-full bg-danger/70" />

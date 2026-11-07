@@ -9,7 +9,7 @@ useSeoMeta({
   <div class="relative flex min-h-[70vh] items-center justify-center overflow-hidden px-4 pt-20">
     <div class="pointer-events-none absolute inset-0" aria-hidden="true">
       <div class="absolute inset-0 bg-grid opacity-40 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,black,transparent)]" />
-      <div class="aurora left-1/3 top-1/4 h-80 w-80 bg-brand-600/25" />
+      <div class="absolute left-1/3 top-1/4 h-80 w-80 rounded-full bg-brand-500/5 blur-3xl" />
     </div>
 
     <div class="relative flex max-w-md flex-col items-center text-center">

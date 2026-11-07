@@ -17,6 +17,8 @@ const form = reactive({
 const projectTypes = [
   'Laravel / Backend development',
   'Financial or payments system',
+  'Access control or security architecture',
+  'Secrets management discussion',
   'Document management system',
   'Point of sale (POS)',
   'Full-stack project',

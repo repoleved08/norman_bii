@@ -4,7 +4,6 @@ export interface Testimonial {
   role: string
   org: string
   initials: string
-  accent: string
 }
 
 export const testimonials: Testimonial[] = [
@@ -15,7 +14,6 @@ export const testimonials: Testimonial[] = [
     role: 'Referee',
     org: 'Contact details on request',
     initials: 'PK',
-    accent: 'from-brand-500 to-accent-400',
   },
   {
     quote:
@@ -24,7 +22,6 @@ export const testimonials: Testimonial[] = [
     role: 'Referee',
     org: 'Contact details on request',
     initials: 'VK',
-    accent: 'from-brand-400 to-brand-600',
   },
   {
     quote:
@@ -33,7 +30,6 @@ export const testimonials: Testimonial[] = [
     role: 'Referee',
     org: 'Contact details on request',
     initials: 'VK',
-    accent: 'from-accent-400 to-brand-500',
   },
   {
     quote:
@@ -42,6 +38,5 @@ export const testimonials: Testimonial[] = [
     role: 'Referee',
     org: 'Contact details on request',
     initials: 'BC',
-    accent: 'from-brand-500 to-accent-400',
   },
 ]

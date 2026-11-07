@@ -19,7 +19,7 @@ useSeoMeta({
             <span class="h-px w-8 bg-gradient-to-r from-brand-500 to-transparent" aria-hidden="true" />
           </div>
           <h1 class="font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-            Every project ships. Nothing is a demo.
+            <UiDecryptText text="Every project ships. Nothing is a demo." />
           </h1>
           <p class="max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
             Each entry includes the challenge, the architecture decision, and the measurable outcome. Expand any card to see how the hard parts were solved.

@@ -36,7 +36,7 @@ const channels = [
 <template>
   <section id="contact" class="relative py-24 sm:py-32">
     <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-      <div class="aurora left-1/2 top-0 h-[360px] w-[560px] -translate-x-1/2 bg-brand-600/20" />
+      <div class="absolute inset-x-0 top-0 h-[360px] bg-[radial-gradient(ellipse_at_50%_0%,#9fef0010,transparent_65%)]" />
     </div>
 
     <div class="relative mx-auto max-w-6xl px-4 sm:px-6">
@@ -45,8 +45,8 @@ const channels = [
           <BaseReveal>
             <BaseSectionHeading
               eyebrow="Contact"
-              title="Let's build something that runs in production"
-              description="Whether you are hiring, need a system built, or want to talk architecture — the inbox is open."
+              title="Need a secure system you can depend on?"
+              description="If you are hiring a technical lead or need help with financial workflows, access control, or production Laravel, tell me what is at stake. Let's talk through the next step."
             />
           </BaseReveal>
 

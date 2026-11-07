@@ -8,6 +8,8 @@ const typeIcon: Record<string, string> = {
   intern: 'lucide:building',
   cert: 'lucide:award',
 }
+
+const featuredExperience = experience.filter((item) => item.current)
 </script>
 
 <template>
@@ -15,9 +17,9 @@ const typeIcon: Record<string, string> = {
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
       <BaseReveal>
         <BaseSectionHeading
-          eyebrow="Experience"
-          title="A track record of shipping"
-          description="From leading enterprise teams to building products — a track record, not a list of keywords."
+          eyebrow="Selected Experience"
+          title="Work that earns trust"
+          description="The roles and decisions most relevant to a production system. Full CV available on request."
         />
       </BaseReveal>
 
@@ -25,7 +27,7 @@ const typeIcon: Record<string, string> = {
         <div class="absolute bottom-4 left-[19px] top-2 w-px bg-gradient-to-b from-brand-500/60 via-line to-transparent sm:left-[21px]" aria-hidden="true" />
 
         <div class="flex flex-col gap-10">
-          <BaseReveal v-for="(item, i) in experience" :key="item.title" :delay="i * 0.08">
+          <BaseReveal v-for="(item, i) in featuredExperience" :key="item.title" :delay="i * 0.08">
             <div class="relative flex gap-5 sm:gap-7">
               <span
                 class="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-line bg-surface text-brand-300 shadow-card sm:h-11 sm:w-11"
@@ -71,6 +73,10 @@ const typeIcon: Record<string, string> = {
             </div>
           </BaseReveal>
         </div>
+        <p class="ml-16 mt-8 max-w-3xl text-sm leading-relaxed text-muted sm:ml-20">
+          Earlier: Laravel & Vue development at Favitech, software engineering at TheJitu, and OSINT analysis
+          at the Media Council of Kenya. BSc Information Technology, Karatina University.
+        </p>
       </div>
     </div>
   </section>

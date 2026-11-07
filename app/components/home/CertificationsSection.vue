@@ -9,7 +9,7 @@ import { certifications } from '~/data/experience'
         <BaseSectionHeading
           eyebrow="Certifications"
           title="Proof of continuous learning"
-          description="Security, concurrency, and infrastructure — the edge skills that make backend code production-safe."
+          description="Networking fundamentals and full-stack training that support the production work above."
         />
       </BaseReveal>
 

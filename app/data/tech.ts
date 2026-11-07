@@ -75,4 +75,11 @@ export const techStack: TechCategory[] = [
   },
 ]
 
-export const marqueeTech = ['Laravel', 'PHP', 'Vue 3', 'Nuxt', 'Golang', 'MySQL', 'Redis', 'WebSockets', 'Reverb', 'Nginx', 'Docker', 'REST APIs', 'RBAC', '2FA']
+const marqueeNames = [
+  'Laravel', 'PHP', 'Vue 3', 'Nuxt', 'Golang', 'MySQL', 'Redis',
+  'WebSockets', 'Laravel Reverb', 'Nginx', 'Docker', 'RBAC',
+]
+
+const techByName = new Map(techStack.flatMap((category) => category.items.map((item) => [item.name, item] as const)))
+
+export const marqueeTech = marqueeNames.map((name) => techByName.get(name)!)

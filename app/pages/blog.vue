@@ -19,7 +19,7 @@ useSeoMeta({
             <span class="h-px w-8 bg-gradient-to-r from-brand-500 to-transparent" aria-hidden="true" />
           </div>
           <h1 class="font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-            Articles from the production trenches
+            <UiDecryptText text="Articles from the production trenches" />
           </h1>
           <p class="max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
             Written for developers who ship — no fluff, no tutorials-for-views. Published on the TechXtraSol engineering blog.

@@ -46,7 +46,7 @@ const loading = computed(() => status.value === 'pending')
                   loading="lazy"
                   decoding="async"
                 />
-                <span v-else class="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-brand-400 to-brand-600 font-display text-2xl font-bold text-white">
+                <span v-else class="flex h-20 w-20 items-center justify-center rounded-full bg-brand-500 font-display text-2xl font-bold text-canvas">
                   NB
                 </span>
                 <span class="absolute -bottom-0.5 -right-0.5 h-5 w-5 rounded-full border-2 border-surface bg-success" aria-hidden="true" />
